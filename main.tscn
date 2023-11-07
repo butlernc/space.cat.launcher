@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_co28f"]
-[ext_resource type="Texture2D" uid="uid://cvyyehwmd8xe0" path="res://background-1.png" id="1_d7lx8"]
-[ext_resource type="Texture2D" uid="uid://dj4wu66nbuonn" path="res://3.png" id="2_26l3r"]
+[ext_resource type="Texture2D" uid="uid://cyrlh66v5hj2n" path="res://Art/Planets/background.png" id="2_6h653"]
 [ext_resource type="PackedScene" uid="uid://fiu7pvwfesxw" path="res://player.tscn" id="2_sssad"]
-[ext_resource type="Texture2D" uid="uid://77n1mbj20l11" path="res://4.png" id="3_iov2w"]
 [ext_resource type="Shape2D" uid="uid://c411rptdq1ti1" path="res://planet_1_coll_shape.tres" id="4_1jpdf"]
-[ext_resource type="Texture2D" uid="uid://hmgru8y4qk0k" path="res://5.png" id="4_jtoxy"]
+[ext_resource type="Texture2D" uid="uid://dj4wu66nbuonn" path="res://Art/Planets/3.png" id="5_tqb71"]
 [ext_resource type="Shape2D" uid="uid://ccc0qakgshsrb" path="res://planet_2_coll_shape.tres" id="6_mgto2"]
 [ext_resource type="PhysicsMaterial" uid="uid://d3msvs6rrulv3" path="res://new_physics_material.tres" id="6_uf3nq"]
 [ext_resource type="Shape2D" uid="uid://blgrqoi0ahysh" path="res://planet_3_coll_shape.tres" id="8_23wgt"]
+[ext_resource type="Texture2D" uid="uid://77n1mbj20l11" path="res://Art/Planets/4.png" id="8_gt5s8"]
+[ext_resource type="Texture2D" uid="uid://hmgru8y4qk0k" path="res://Art/Planets/5.png" id="10_x1au7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fvwxb"]
 radius = 122.77
@@ -21,7 +21,7 @@ script = ExtResource("1_co28f")
 
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -1
-texture = ExtResource("1_d7lx8")
+texture = ExtResource("2_6h653")
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(-155, 32.67)
@@ -43,7 +43,7 @@ shape = ExtResource("4_1jpdf")
 [node name="Texture" type="Sprite2D" parent="Planet 1"]
 z_index = 1
 scale = Vector2(0.075, 0.075)
-texture = ExtResource("2_26l3r")
+texture = ExtResource("5_tqb71")
 
 [node name="gravity-well" type="Area2D" parent="Planet 1"]
 gravity_space_override = 1
@@ -66,7 +66,7 @@ shape = ExtResource("6_mgto2")
 
 [node name="Texture" type="Sprite2D" parent="Planet 2"]
 scale = Vector2(0.045, 0.045)
-texture = ExtResource("3_iov2w")
+texture = ExtResource("8_gt5s8")
 
 [node name="Planet 3" type="RigidBody2D" parent="."]
 position = Vector2(172, -110)
@@ -78,7 +78,7 @@ shape = ExtResource("8_23wgt")
 
 [node name="Texture" type="Sprite2D" parent="Planet 3"]
 scale = Vector2(0.09, 0.09)
-texture = ExtResource("4_jtoxy")
+texture = ExtResource("10_x1au7")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 visible = false
