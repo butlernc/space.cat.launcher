@@ -1,4 +1,4 @@
-extends Area2D
+extends RigidBody2D
 signal hit
 
 var move_direction = Vector2(2, -1)

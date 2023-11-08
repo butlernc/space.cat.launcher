@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://q4xyny6k1bcj"]
+
+[ext_resource type="PackedScene" uid="uid://ck8ux76qd6vkq" path="res://planet_gravity.tscn" id="1_7neje"]
+[ext_resource type="Texture2D" uid="uid://d3pd2gk4g88v2" path="res://Assets/planet_2.png" id="2_xexvs"]
+
+[node name="Planet" type="Area2D"]
+
+[node name="PlanetCollisionShape" type="CollisionShape2D" parent="."]
+
+[node name="PlanetGravityWell" parent="." instance=ExtResource("1_7neje")]
+
+[node name="PlanetTexture" type="Sprite2D" parent="."]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_xexvs")
+
+[editable path="PlanetGravityWell"]
