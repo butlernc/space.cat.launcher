@@ -6,4 +6,4 @@ var camera
 var is_paused
 
 var planets = []
-var GRAVITY_CONSTANT = 0.0000000000674
+var GRAVITY_CONSTANT = 6.6743 * pow(10, -2)
