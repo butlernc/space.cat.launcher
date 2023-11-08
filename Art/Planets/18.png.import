@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du4fia6536fvt"
+<<<<<<<< HEAD:Assets/18.png.import
 path="res://.godot/imported/18.png-0618c5b569b45740304951923720073f.ctex"
+========
+path="res://.godot/imported/18.png-8b161e25fb77a737816f9e91b6e31247.ctex"
+>>>>>>>> sprite_stuff:Art/Planets/18.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:Assets/18.png.import
 source_file="res://Assets/18.png"
 dest_files=["res://.godot/imported/18.png-0618c5b569b45740304951923720073f.ctex"]
+========
+source_file="res://Art/Planets/18.png"
+dest_files=["res://.godot/imported/18.png-8b161e25fb77a737816f9e91b6e31247.ctex"]
+>>>>>>>> sprite_stuff:Art/Planets/18.png.import
 
 [params]
 
