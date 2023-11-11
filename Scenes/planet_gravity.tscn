@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ck8ux76qd6vkq"]
 
-[ext_resource type="Shape2D" uid="uid://bn3uw1lhs4r3a" path="res://Scenes/planet_base_gravityt_well.tres" id="1_l3kfq"]
+[ext_resource type="Shape2D" uid="uid://bn3uw1lhs4r3a" path="res://Scenes/planet_base_gravity_well.tres" id="1_l3kfq"]
 
 [node name="Planet-Gravity" type="Area2D"]
 gravity_space_override = 1

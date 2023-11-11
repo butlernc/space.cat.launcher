@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://ccboke13q1881"]
-
-[node name="Node2D" type="Node2D"]
-position = Vector2(927, 1759)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

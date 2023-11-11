@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://77n1mbj20l11"
-<<<<<<<< HEAD:Assets/4.png.import
-path="res://.godot/imported/4.png-25236bcb720ac4a817afb4bc0d760f10.ctex"
-========
+uid="uid://dbshqnjpkrtov"
 path="res://.godot/imported/4.png-6c45d7d6318a6eb4bb23d3f432060daa.ctex"
->>>>>>>> sprite_stuff:Art/Planets/4.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Assets/4.png.import
-source_file="res://Assets/4.png"
-dest_files=["res://.godot/imported/4.png-25236bcb720ac4a817afb4bc0d760f10.ctex"]
-========
 source_file="res://Art/Planets/4.png"
 dest_files=["res://.godot/imported/4.png-6c45d7d6318a6eb4bb23d3f432060daa.ctex"]
->>>>>>>> sprite_stuff:Art/Planets/4.png.import
 
 [params]
 
