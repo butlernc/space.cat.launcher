@@ -1,16 +1,16 @@
 extends RigidBody2D
 signal hit
 
-var speed = 1000
+var force = 5000
 var screen_size
 var collision = false
 
 var line2d_template : Line2D
 var lines_container : Node2D
 
-var line_length : float = 20.0
-var line_spacing : float = 5.0
-var max_lines : int = 10
+var line_length : int = 20
+var line_spacing : int = 5
+var total_line_length : int = (line_length + line_spacing)
 var shot_fired = false
 
 # Called when the node enters the scene tree for the first time.
@@ -25,8 +25,6 @@ func _ready():
 	# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	update_lines()
-	# if !collision:
-	#	set_position(position + move_direction.normalized())
 
 func start(pos):
 	var position = pos
@@ -49,29 +47,28 @@ func update_lines():
 	
 	var distance = player_position.distance_to(mouse_position)
 	var angle = player_position.direction_to(mouse_position)
-	
+	var max_lines = floor(distance / total_line_length)
 	var current_length = 0.0
 	var lines_added = 0
 	
 	while current_length < line_length * max_lines:
-		current_length += line_length + line_spacing
+		current_length += total_line_length
 		var start_point = (global_position + angle * current_length)
 		var end_point = (start_point + angle * line_length)
-		lines_added += 1
+		create_line(start_point, end_point)
 		
 
 func _integrate_forces(state):
 	# Check if the mouse button is pressed (left mouse button)
 	if Input.is_action_pressed("left_mouse_click"):
-		print("hello")
 		# Get the mouse position
 		var target_position = get_global_mouse_position()
 
 		var direction = (target_position - state.transform.origin).normalized()
 
-		# Set the linear velocity based on the direction and speed
+		# Set the linear velocity based on the direction and force
 		if !shot_fired:
-			state.apply_force(direction * speed)
+			state.apply_force(direction * force)
 			shot_fired = true
 
 func _on_body_entered(body):
