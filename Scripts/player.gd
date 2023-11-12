@@ -1,7 +1,7 @@
 extends RigidBody2D
 signal hit
 
-var speed = 100
+var speed = 1000
 var screen_size
 var collision = false
 
@@ -11,6 +11,7 @@ var lines_container : Node2D
 var line_length : float = 20.0
 var line_spacing : float = 5.0
 var max_lines : int = 10
+var shot_fired = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -69,7 +70,9 @@ func _integrate_forces(state):
 		var direction = (target_position - state.transform.origin).normalized()
 
 		# Set the linear velocity based on the direction and speed
-		state.apply_force(direction * speed)
+		if !shot_fired:
+			state.apply_force(direction * speed)
+			shot_fired = true
 
 func _on_body_entered(body):
 	hit.emit()
