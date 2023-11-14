@@ -2,6 +2,7 @@ extends Node
 
 var player
 var camera
+var GUNNER_UI_SW = true
 
 var is_paused
 

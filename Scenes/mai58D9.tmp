@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=12 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="Texture2D" uid="uid://ch152304v37bv" path="res://Art/Planets/background.png" id="2_p0m37"]
@@ -9,7 +9,6 @@
 [ext_resource type="Shape2D" uid="uid://bn3uw1lhs4r3a" path="res://Scenes/planet_base_gravity_well.tres" id="8_7oe4v"]
 [ext_resource type="Texture2D" uid="uid://w6ywwsxljsew" path="res://Art/Planets/5.png" id="8_x81fl"]
 [ext_resource type="Texture2D" uid="uid://cn2jmvetbry20" path="res://Art/Planets/17.png" id="9_661bp"]
-[ext_resource type="Script" path="res://Scenes/AimLines.gd" id="10_yl81j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mp7u"]
 radius = 115.27
@@ -83,9 +82,6 @@ shape = SubResource("CircleShape2D_2604x")
 [node name="Sprite2D" type="Sprite2D" parent="Planet 1"]
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("9_661bp")
-
-[node name="AimLines" type="Node2D" parent="."]
-script = ExtResource("10_yl81j")
 
 [connection signal="hit" from="Player" to="." method="planet_strike"]
 
