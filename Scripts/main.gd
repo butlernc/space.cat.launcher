@@ -17,6 +17,8 @@ func planet_strike():
 
 func new_game():
 	score = 0
+	print($StartPosition.position)
+	print($Player.position)
 	$Player.start($StartPosition.position)
 	
 

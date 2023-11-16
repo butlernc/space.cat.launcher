@@ -9,7 +9,7 @@
 [ext_resource type="Shape2D" uid="uid://bn3uw1lhs4r3a" path="res://Scenes/planet_base_gravity_well.tres" id="8_7oe4v"]
 [ext_resource type="Texture2D" uid="uid://w6ywwsxljsew" path="res://Art/Planets/5.png" id="8_x81fl"]
 [ext_resource type="Texture2D" uid="uid://cn2jmvetbry20" path="res://Art/Planets/17.png" id="9_661bp"]
-[ext_resource type="Script" path="res://Scenes/AimLines.gd" id="10_yl81j"]
+[ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mp7u"]
 radius = 115.27
@@ -53,6 +53,7 @@ position = Vector2(172, -110)
 mass = 10000.0
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planet 3"]
@@ -74,9 +75,6 @@ shape = SubResource("CircleShape2D_5mp7u")
 position = Vector2(-155, 89)
 mass = 1000.0
 
-[node name="gravity-well" type="CollisionShape2D" parent="Planet 1"]
-shape = ExtResource("8_7oe4v")
-
 [node name="planet-surface" type="CollisionShape2D" parent="Planet 1"]
 shape = SubResource("CircleShape2D_2604x")
 
@@ -84,8 +82,13 @@ shape = SubResource("CircleShape2D_2604x")
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("9_661bp")
 
+[node name="gravity-well" type="Area2D" parent="Planet 1"]
+
+[node name="gravity-well-shape" type="CollisionShape2D" parent="Planet 1/gravity-well"]
+shape = ExtResource("8_7oe4v")
+
 [node name="AimLines" type="Node2D" parent="."]
-script = ExtResource("10_yl81j")
+script = ExtResource("10_lew55")
 
 [connection signal="hit" from="Player" to="." method="planet_strike"]
 

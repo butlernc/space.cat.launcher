@@ -17,12 +17,17 @@ func _process(delta):
 		on_right_click()
 	if Input.is_action_just_released("right_mouse_click"):
 		on_right_click_release()
+	if Input.is_action_pressed("left_mouse_click"):
+		on_left_click()
 		
 func on_right_click():
 	if Globals.GUNNER_UI_SW:
 		refresh_aim_line()
 	
 func on_right_click_release():
+	remove_aim_line()
+
+func on_left_click():
 	remove_aim_line()
 	
 func refresh_aim_line():
