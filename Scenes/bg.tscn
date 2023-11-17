@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt7vsfdstvba6"]
+
+[ext_resource type="Texture2D" uid="uid://bnqvunqixskx4" path="res://Art/Planets/bg.png" id="1_rrmb1"]
+[ext_resource type="Texture2D" uid="uid://hbmvvutp3yun" path="res://Art/Planets/stars_far.png" id="2_sevjm"]
+[ext_resource type="Texture2D" uid="uid://lxdmvmhskeig" path="res://Art/Planets/stars_mid.png" id="3_vu3bg"]
+[ext_resource type="Texture2D" uid="uid://dcf7dr3e5inkb" path="res://Art/Planets/stars_close.png" id="4_dpkx5"]
+
+[node name="BG" type="ParallaxBackground"]
+
+[node name="Space" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(960, 540)
+
+[node name="Bg" type="Sprite2D" parent="Space"]
+texture_filter = 1
+position = Vector2(480, 270)
+texture = ExtResource("1_rrmb1")
+
+[node name="StarsFar" type="ParallaxLayer" parent="."]
+position = Vector2(93, 112)
+motion_scale = Vector2(0.01, 0.01)
+motion_mirroring = Vector2(960, 540)
+
+[node name="StarsFar" type="Sprite2D" parent="StarsFar"]
+texture_filter = 1
+position = Vector2(387, 158)
+texture = ExtResource("2_sevjm")
+
+[node name="StarsMid" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.025, 0.025)
+motion_mirroring = Vector2(960, 540)
+
+[node name="StarsMid2" type="Sprite2D" parent="StarsMid"]
+texture_filter = 1
+position = Vector2(480, 270)
+texture = ExtResource("3_vu3bg")
+
+[node name="StarsClose" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(960, 540)
+
+[node name="StarsClose2" type="Sprite2D" parent="StarsClose"]
+texture_filter = 1
+position = Vector2(480, 270)
+texture = ExtResource("4_dpkx5")

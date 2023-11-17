@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
-[ext_resource type="Texture2D" uid="uid://ch152304v37bv" path="res://Art/Planets/background.png" id="2_p0m37"]
+[ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
 [ext_resource type="PackedScene" uid="uid://fiu7pvwfesxw" path="res://Scenes/player.tscn" id="3_iwsuf"]
 [ext_resource type="Shape2D" uid="uid://ccc0qakgshsrb" path="res://Scenes/planet_2_coll_shape.tres" id="4_7f7df"]
 [ext_resource type="Texture2D" uid="uid://dbshqnjpkrtov" path="res://Art/Planets/4.png" id="6_83axn"]
@@ -20,11 +20,7 @@ radius = 46.09
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wjwf8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="BG" type="Sprite2D" parent="."]
-z_index = -1
-texture = ExtResource("2_p0m37")
+[node name="BG2" parent="." instance=ExtResource("2_gah3j")]
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(-155, 32.67)
@@ -33,6 +29,15 @@ position = Vector2(-155, 32.67)
 position = Vector2(-155, 34)
 mass = 0.2
 can_sleep = false
+
+[node name="Sprite2D" parent="Player" index="1"]
+texture_filter = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
 
 [node name="Planet 2" type="RigidBody2D" parent="."]
 position = Vector2(-54, 50)
