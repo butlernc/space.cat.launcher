@@ -1,13 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1iw2uj5wc7wh"]
+[gd_scene load_steps=2 format=3 uid="uid://gxxh4g26ko7h"]
 
-[ext_resource type="Texture2D" uid="uid://ccqhj0d4gm3ph" path="res://Art/HUD/hud_placeholder.png" id="1_r6vk4"]
+[ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
 
 [node name="HUD" type="Control"]
+texture_filter = 1
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_r6vk4")
+texture = ExtResource("1_iel0u")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=14 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
 [ext_resource type="PackedScene" uid="uid://fiu7pvwfesxw" path="res://Scenes/player.tscn" id="3_iwsuf"]
 [ext_resource type="Shape2D" uid="uid://ccc0qakgshsrb" path="res://Scenes/planet_2_coll_shape.tres" id="4_7f7df"]
+[ext_resource type="PackedScene" uid="uid://gxxh4g26ko7h" path="res://Scenes/HUD.tscn" id="4_7knsj"]
 [ext_resource type="Texture2D" uid="uid://dbshqnjpkrtov" path="res://Art/Planets/4.png" id="6_83axn"]
 [ext_resource type="Shape2D" uid="uid://blgrqoi0ahysh" path="res://Scenes/planet_3_coll_shape.tres" id="6_lbsq1"]
 [ext_resource type="Shape2D" uid="uid://bn3uw1lhs4r3a" path="res://Scenes/planet_base_gravity_well.tres" id="8_7oe4v"]
@@ -21,6 +22,8 @@ radius = 46.09
 script = ExtResource("1_wjwf8")
 
 [node name="BG2" parent="." instance=ExtResource("2_gah3j")]
+
+[node name="HUD" parent="." instance=ExtResource("4_7knsj")]
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(-155, 32.67)
