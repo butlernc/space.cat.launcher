@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://gxxh4g26ko7h"]
+[gd_scene load_steps=3 format=3 uid="uid://gxxh4g26ko7h"]
 
+[ext_resource type="Script" path="res://Scripts/cat-cam.gd" id="1_36dhd"]
 [ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
 
 [node name="HUD" type="Control"]
@@ -17,3 +18,7 @@ grow_vertical = 2
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_iel0u")
+
+[node name="CatCam" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+position = Vector2(898, 129)
+script = ExtResource("1_36dhd")

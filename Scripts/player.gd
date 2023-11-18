@@ -41,6 +41,7 @@ func _integrate_forces(state):
 		fire(state)
 		
 		
+		
 
 func _on_body_entered(_body):
 	hit.emit()
