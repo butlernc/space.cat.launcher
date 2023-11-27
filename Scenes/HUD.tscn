@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://gxxh4g26ko7h"]
+[gd_scene load_steps=4 format=3 uid="uid://gxxh4g26ko7h"]
 
 [ext_resource type="Script" path="res://Scripts/cat-cam.gd" id="1_36dhd"]
 [ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
+[ext_resource type="Script" path="res://Scripts/reset.gd" id="3_tr082"]
 
 [node name="HUD" type="Control"]
 texture_filter = 1
@@ -22,3 +23,13 @@ texture = ExtResource("1_iel0u")
 [node name="CatCam" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 position = Vector2(898, 129)
 script = ExtResource("1_36dhd")
+
+[node name="Reset" type="Button" parent="CanvasLayer"]
+offset_left = 31.0
+offset_top = 489.0
+offset_right = 82.0
+offset_bottom = 520.0
+text = "Reset"
+script = ExtResource("3_tr082")
+
+[connection signal="pressed" from="CanvasLayer/Reset" to="CanvasLayer/Reset" method="_on_pressed"]
