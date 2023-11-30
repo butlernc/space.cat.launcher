@@ -31,7 +31,7 @@ position = Vector2(-155, 32.67)
 
 [node name="Player" parent="." instance=ExtResource("3_iwsuf")]
 position = Vector2(-155, 34)
-mass = 0.2
+mass = 0.01
 can_sleep = false
 
 [node name="Sprite2D" parent="Player" index="1"]

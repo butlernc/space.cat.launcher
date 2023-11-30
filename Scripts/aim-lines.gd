@@ -52,7 +52,6 @@ func refresh_aim_line():
 		
 func create_aim_line():
 		remove_aim_line()
-		print("lines_container_gced_true")
 		lines_container = Node2D.new()
 		add_child(lines_container)
 	
