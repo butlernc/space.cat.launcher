@@ -1,7 +1,7 @@
 extends RigidBody2D
 signal collision_signal
 
-var force = 5000
+var force = 10000
 var collision = false
 var shot_fired = false
 
