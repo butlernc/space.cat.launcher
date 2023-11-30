@@ -1,7 +1,8 @@
 extends RigidBody2D
-signal collision_signal
+signal collided
+signal cat_fired
 
-var force = 5000
+var force = 100
 var collision = false
 var shot_fired = false
 
@@ -26,9 +27,9 @@ func fire(state):
 	
 	# Set the linear velocity based on the direction and force
 	if !shot_fired:
+		cat_fired.emit()
 		shot_fired = true
 		reset_rigidbody_state = false
-		Globals.GUNNER_UI_SW = false
 		
 		var mouse_position = get_global_mouse_position()
 		var direction = (mouse_position - state.transform.origin).normalized()
@@ -42,7 +43,6 @@ func start(pos):
 	$CollisionShape2D.disabled = false
 
 func reset():
-	print("resetting player")
 	reset_rigidbody_state = true
 	position = initial_position
 	rotation = initial_rotation
@@ -62,6 +62,6 @@ func _integrate_forces(state):
 		fire(state)
 		
 func _on_body_entered(_body):
-	collision_signal.emit()
+	collided.emit()
 	collision = true
 	$CollisionShape2D.set_deferred("disabled", true)
