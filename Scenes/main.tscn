@@ -1,27 +1,15 @@
-<<<<<<< HEAD
-[gd_scene load_steps=16 format=3 uid="uid://d3wvr5qww27hg"]
-=======
 [gd_scene load_steps=14 format=3 uid="uid://d3wvr5qww27hg"]
->>>>>>> 4356a8a16418b9f514c4951468cc15cb1a9aa7ef
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
 [ext_resource type="PackedScene" uid="uid://fiu7pvwfesxw" path="res://Scenes/player.tscn" id="3_iwsuf"]
 [ext_resource type="Shape2D" uid="uid://ccc0qakgshsrb" path="res://Scenes/planet_2_coll_shape.tres" id="4_7f7df"]
 [ext_resource type="PackedScene" uid="uid://gxxh4g26ko7h" path="res://Scenes/HUD.tscn" id="4_7knsj"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://dbshqnjpkrtov" path="res://Art/Planets/4.png" id="6_83axn"]
-[ext_resource type="Shape2D" uid="uid://blgrqoi0ahysh" path="res://Scenes/planet_3_coll_shape.tres" id="6_lbsq1"]
-[ext_resource type="Shape2D" uid="uid://bn3uw1lhs4r3a" path="res://Scenes/planet_base_gravity_well.tres" id="8_7oe4v"]
-[ext_resource type="Texture2D" uid="uid://w6ywwsxljsew" path="res://Art/Planets/5.png" id="8_x81fl"]
-[ext_resource type="Texture2D" uid="uid://cn2jmvetbry20" path="res://Art/Planets/17.png" id="9_661bp"]
-=======
 [ext_resource type="Texture2D" uid="uid://cped3rbjbceg0" path="res://Art/Planets/small_planets1.png" id="6_cxciw"]
 [ext_resource type="Shape2D" uid="uid://blgrqoi0ahysh" path="res://Scenes/planet_3_coll_shape.tres" id="6_lbsq1"]
 [ext_resource type="Texture2D" uid="uid://bdbc57t3ybyms" path="res://Art/Planets/big_planets2.png" id="8_bv5t0"]
 [ext_resource type="Texture2D" uid="uid://c6ihkr33oo23k" path="res://Art/Planets/big_planets3.png" id="9_mwsff"]
 [ext_resource type="Texture2D" uid="uid://dt3btvevspftg" path="res://Art/Planets/big_planets5.png" id="10_5pnan"]
->>>>>>> 4356a8a16418b9f514c4951468cc15cb1a9aa7ef
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
 [ext_resource type="Script" path="res://Scripts/PPR.gd" id="12_4g3fa"]
 [ext_resource type="Script" path="res://Scripts/BPR.gd" id="13_jeosd"]
@@ -42,11 +30,7 @@ position = Vector2(-155, 32.67)
 [node name="Player" parent="." instance=ExtResource("3_iwsuf")]
 texture_filter = 1
 position = Vector2(-155, 34)
-<<<<<<< HEAD
 mass = 0.01
-=======
-mass = 0.3
->>>>>>> 4356a8a16418b9f514c4951468cc15cb1a9aa7ef
 can_sleep = false
 
 [node name="Sprite2D" parent="Player" index="1"]
