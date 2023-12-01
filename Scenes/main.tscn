@@ -8,11 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cped3rbjbceg0" path="res://Art/Planets/small_planets1.png" id="6_cxciw"]
 [ext_resource type="Shape2D" uid="uid://blgrqoi0ahysh" path="res://Scenes/planet_3_coll_shape.tres" id="6_lbsq1"]
 [ext_resource type="Texture2D" uid="uid://bdbc57t3ybyms" path="res://Art/Planets/big_planets2.png" id="8_bv5t0"]
+[ext_resource type="Script" path="res://Scripts/planet.gd" id="8_ofrto"]
 [ext_resource type="Texture2D" uid="uid://c6ihkr33oo23k" path="res://Art/Planets/big_planets3.png" id="9_mwsff"]
 [ext_resource type="Texture2D" uid="uid://dt3btvevspftg" path="res://Art/Planets/big_planets5.png" id="10_5pnan"]
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
-[ext_resource type="Script" path="res://Scripts/PPR.gd" id="12_4g3fa"]
-[ext_resource type="Script" path="res://Scripts/BPR.gd" id="13_jeosd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mp7u"]
 radius = 115.27
@@ -30,8 +29,10 @@ position = Vector2(-155, 32.67)
 [node name="Player" parent="." instance=ExtResource("3_iwsuf")]
 texture_filter = 1
 position = Vector2(-155, 34)
-mass = 0.01
+max_contacts_reported = 1
+contact_monitor = true
 can_sleep = false
+freeze_mode = 1
 
 [node name="Sprite2D" parent="Player" index="1"]
 texture_filter = 1
@@ -46,9 +47,6 @@ rotation_smoothing_speed = 3.0
 [node name="AimLines" type="Node2D" parent="."]
 script = ExtResource("10_lew55")
 
-[node name="GameStateManager" type="Node2D" parent="."]
-script = ExtResource("13_3oxq1")
-
 [node name="Planets" type="Node" parent="."]
 
 [node name="Large" type="Node" parent="Planets"]
@@ -59,6 +57,7 @@ mass = 10000.0
 gravity_scale = 0.0
 can_sleep = false
 freeze = true
+script = ExtResource("8_ofrto")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 1"]
@@ -83,6 +82,7 @@ mass = 10000.0
 gravity_scale = 0.0
 can_sleep = false
 freeze = true
+script = ExtResource("8_ofrto")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 2"]
@@ -107,6 +107,7 @@ mass = 10000.0
 gravity_scale = 0.0
 can_sleep = false
 freeze = true
+script = ExtResource("8_ofrto")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 3"]
@@ -143,8 +144,12 @@ position = Vector2(-0.42, 0)
 scale = Vector2(0.53, 0.53)
 texture = ExtResource("6_cxciw")
 
-[node name="AimLines" type="Node2D" parent="."]
-script = ExtResource("10_lew55")
+[node name="Asteroids" type="Node" parent="Planets"]
+
+[connection signal="pressed" from="HUD/CanvasLayer/Reset" to="Player" method="reset"]
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
+[connection signal="cat_launched" from="Player" to="HUD/CanvasLayer/TextureRect/CatCam" method="_on_cat_launched"]
+[connection signal="body_entered" from="Planets/Large/Large 3" to="Planets/Large/Large 3" method="_on_body_entered"]
 
 [editable path="HUD"]
 [editable path="Player"]

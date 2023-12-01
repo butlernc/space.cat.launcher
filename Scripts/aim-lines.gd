@@ -2,9 +2,9 @@ extends Node2D
 
 var lines_container : Node2D
 
-var line_length : int = 20
+var individual_line_length : int = 20
 var line_spacing : int = 5
-var total_line_length : int = (line_length + line_spacing)
+var line_length : int = (individual_line_length + line_spacing)
 var lines_container_gced : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -21,7 +21,7 @@ func _process(delta):
 		on_left_click()
 		
 func on_right_click():
-	if Globals.GUNNER_UI_SW:
+	if Globals.GUNNER_UI_ON:
 		refresh_aim_line()
 	
 func on_right_click_release():
@@ -29,6 +29,9 @@ func on_right_click_release():
 
 func on_left_click():
 	remove_aim_line()
+	
+func is_creating_last_line(current_length, individual_line_length, max_lines):
+	return (current_length + individual_line_length) > (individual_line_length * (max_lines - 1))
 	
 func refresh_aim_line():
 	remove_aim_line()
@@ -41,13 +44,15 @@ func refresh_aim_line():
 	
 	var distance = player_position.distance_to(mouse_position)
 	var angle = player_position.direction_to(mouse_position)
-	var max_lines = floor(distance / total_line_length)
+	var max_lines = floor(distance / line_length)
 	var current_length = 0.0
 	
-	while current_length <= line_length * max_lines:
-		current_length += total_line_length
+	while current_length < line_length * (max_lines - 1):
+		current_length += line_length
 		var start_point = (player_position + angle * current_length)
-		var end_point = (start_point + angle * line_length)
+		var end_point = (start_point + angle * individual_line_length)
+		
+		
 		create_line(start_point, end_point)
 		
 func create_aim_line():
@@ -67,7 +72,7 @@ func freed():
 func create_line(p1 : Vector2, p2 : Vector2):
 	# var line_instance = line2d_template.duplicate() as Line2D\
 	var line2D = Line2D.new()
-	line2D.width = 5
+	line2D.width = 2
 	line2D.add_point(p1)
 	line2D.add_point(p2)
 	lines_container.add_child(line2D)

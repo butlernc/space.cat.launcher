@@ -31,5 +31,3 @@ offset_right = 82.0
 offset_bottom = 520.0
 text = "Reset"
 script = ExtResource("3_tr082")
-
-[connection signal="pressed" from="CanvasLayer/Reset" to="CanvasLayer/Reset" method="_on_pressed"]

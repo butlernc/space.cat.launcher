@@ -16,16 +16,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("right_mouse_click") || Input.is_action_pressed("left_mouse_click"):
-		if not changing_portrait:
-			change_portrait()
-			changing_portrait = true
-
-	else:
-		changing_portrait = false
+	pass
 		
 func change_portrait():
+	changing_portrait = true
 	if sprite_textures.size() > 0:
 		var random_index : int = randi() % sprite_textures.size()
 		texture = sprite_textures[random_index]
+	changing_portrait = false	
+	
+func _on_cat_launched():
+	change_portrait()
 		
