@@ -29,7 +29,7 @@ position = Vector2(-155, 32.67)
 
 [node name="Player" parent="." instance=ExtResource("3_iwsuf")]
 texture_filter = 1
-position = Vector2(-155, 34)
+position = Vector2(-155, 13)
 max_contacts_reported = 1
 contact_monitor = true
 can_sleep = false
@@ -62,23 +62,24 @@ script = ExtResource("8_ofrto")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 1"]
+scale = Vector2(1.43, 1.43)
 shape = ExtResource("6_lbsq1")
 
 [node name="Texture" type="Sprite2D" parent="Planets/Large/Large 1"]
 texture_filter = 1
-scale = Vector2(0.71, 0.71)
 texture = ExtResource("9_mwsff")
 
 [node name="gravity-well" type="Area2D" parent="Planets/Large/Large 1"]
 gravity_space_override = 1
 gravity_point = true
-gravity = 1309.2
+gravity = 1300.0
 
 [node name="gravity-well-shape" type="CollisionShape2D" parent="Planets/Large/Large 1/gravity-well"]
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_5mp7u")
 
 [node name="Large 2" type="RigidBody2D" parent="Planets/Large"]
-position = Vector2(172, -110)
+position = Vector2(159, -184)
 mass = 10000.0
 gravity_scale = 0.0
 can_sleep = false
@@ -87,23 +88,24 @@ script = ExtResource("8_ofrto")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 2"]
+scale = Vector2(1.43, 1.43)
 shape = ExtResource("6_lbsq1")
 
 [node name="Texture" type="Sprite2D" parent="Planets/Large/Large 2"]
 texture_filter = 1
-scale = Vector2(0.71, 0.71)
 texture = ExtResource("8_bv5t0")
 
 [node name="gravity-well" type="Area2D" parent="Planets/Large/Large 2"]
 gravity_space_override = 1
 gravity_point = true
-gravity = 641.374
+gravity = 1300.0
 
 [node name="gravity-well-shape" type="CollisionShape2D" parent="Planets/Large/Large 2/gravity-well"]
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_5mp7u")
 
 [node name="Large 3" type="RigidBody2D" parent="Planets/Large"]
-position = Vector2(216, 111)
+position = Vector2(374, 87)
 mass = 10000.0
 gravity_scale = 0.0
 can_sleep = false
@@ -112,19 +114,20 @@ script = ExtResource("8_ofrto")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 3"]
+scale = Vector2(1.43, 1.43)
 shape = ExtResource("6_lbsq1")
 
 [node name="Texture" type="Sprite2D" parent="Planets/Large/Large 3"]
 texture_filter = 1
-scale = Vector2(0.71, 0.71)
 texture = ExtResource("10_5pnan")
 
 [node name="gravity-well" type="Area2D" parent="Planets/Large/Large 3"]
 gravity_space_override = 1
 gravity_point = true
-gravity = 1309.2
+gravity = 1300.0
 
 [node name="gravity-well-shape" type="CollisionShape2D" parent="Planets/Large/Large 3/gravity-well"]
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_5mp7u")
 
 [node name="Medium" type="Node" parent="Planets"]
