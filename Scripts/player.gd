@@ -1,5 +1,6 @@
 extends RigidBody2D
 signal cat_launched
+signal taco_collected
 
 var force = 700
 var launched = false
@@ -40,7 +41,7 @@ func _integrate_forces(state):
 	if reset_rigidbody_state:
 		position = initial_position
 		rotation = initial_rotation
-		state.apply_impulse(Vector2.ZERO)
+		#state.apply_impulse(Vector2.ZERO)
 		state.linear_velocity = Vector2.ZERO
 		state.angular_velocity = 0
 		state.transform.origin = initial_position
@@ -65,3 +66,6 @@ func _on_body_entered(body):
 		match(body.type):
 			Globals.BODY_TYPE_PLANET:
 				reset_launcher()
+			Globals.BODY_TYPE_TACO:
+				body.queue_free()
+				taco_collected.emit()

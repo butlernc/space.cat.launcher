@@ -31,3 +31,9 @@ offset_right = 82.0
 offset_bottom = 520.0
 text = "Reset"
 script = ExtResource("3_tr082")
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 704.0
+offset_top = 495.0
+offset_right = 744.0
+offset_bottom = 518.0

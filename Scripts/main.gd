@@ -2,6 +2,7 @@ extends Node2D
 signal initial_game
 signal planet_reached
 signal game_over
+var score = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,12 +18,11 @@ func planet_strike():
 
 func new_game():
 	$Player.start($StartPosition.position)
-
-func on_player_collision():
-	pass
 	
-func on_reset():
-	$Player.reset()
+func _on_taco_collected():
+	score += 1
+	get_node("HUD/CanvasLayer/Score").text = str(score)
+	
 
 	
 
