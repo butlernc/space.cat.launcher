@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=15 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c6ihkr33oo23k" path="res://Art/Planets/big_planets3.png" id="9_mwsff"]
 [ext_resource type="Texture2D" uid="uid://dt3btvevspftg" path="res://Art/Planets/big_planets5.png" id="10_5pnan"]
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
+[ext_resource type="Script" path="res://Scenes/orbit_planet.gd" id="11_5kv7q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mp7u"]
 radius = 115.27
@@ -132,8 +133,7 @@ shape = SubResource("CircleShape2D_5mp7u")
 
 [node name="Small 1" type="RigidBody2D" parent="Planets/Small"]
 position = Vector2(-50, 20)
-custom_integrator = true
-can_sleep = false
+script = ExtResource("11_5kv7q")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Small/Small 1"]
