@@ -17,7 +17,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
-	
+#	var colliding_bodies: Array = get_colliding_bodies()
+#    # Iterate through each colliding body
+#	for body in colliding_bodies:
+#        # Check if the colliding body is a RigidBody2D
+#		if body is RigidBody2D:
+#            # Get the force applied to this RigidBody2D by the colliding body
+#			var force_applied: Vector2 = get_force(body)
+#            # Print out information about the force
+#			print("Force from", body.name, ":", force_applied)
+#
 func on_left_click():
 	pass
 
@@ -45,7 +54,8 @@ func _integrate_forces(state):
 		state.linear_velocity = Vector2.ZERO
 		state.angular_velocity = 0
 		state.transform.origin = initial_position
-	
+		state.apply_force(Vector2.ZERO)
+		
 	if Input.is_action_pressed("left_mouse_click"):
 		if !launched:
 			cat_launched.emit()
@@ -62,7 +72,7 @@ func _integrate_forces(state):
 
 func _on_body_entered(body):
 	if(launched && ("type" in body)):
-		print(body.type)
+		print(body.name,body.type)
 		match(body.type):
 			Globals.BODY_TYPE_PLANET:
 				reset_launcher()
