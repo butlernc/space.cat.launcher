@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://vsujpuesf3xh"]
-
-[node name="Line2D" type="Line2D"]
-points = PackedVector2Array(0, 0, 50, 0)
-width = 5.0
