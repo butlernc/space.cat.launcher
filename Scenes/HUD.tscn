@@ -80,7 +80,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"landed",
-"speed": 5.0
+"speed": 0.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -112,7 +112,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"launched",
-"speed": 5.0
+"speed": 0.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -147,7 +147,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"player_aiming",
-"speed": 5.0
+"speed": 0.0
 }]
 
 [node name="HUD" type="Control"]
@@ -169,7 +169,7 @@ texture = ExtResource("1_iel0u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/TextureRect"]
 position = Vector2(898, 129)
 sprite_frames = SubResource("SpriteFrames_3beex")
-animation = &"launched"
+animation = &"player_aiming"
 script = ExtResource("1_36dhd")
 
 [node name="Reset" type="Button" parent="CanvasLayer"]
