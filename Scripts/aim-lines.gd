@@ -48,14 +48,19 @@ func refresh_aim_line():
 	var angle = player_position.direction_to(mouse_position)
 	var max_lines = floor(distance / line_length)
 	var current_length = 0.0
+	var index = 0
 	
 	while current_length < line_length * (max_lines - 1):
+		index += 1
 		current_length += line_length
 		var start_point = (player_position + angle * current_length)
-		var end_point = (start_point + angle * individual_line_length)
+		var line_variability = (index + 10)
+		if(line_variability > individual_line_length):
+			line_variability = individual_line_length
+		var end_point = (start_point + angle * line_variability)
 		
 		
-		create_line(start_point, end_point, current_length)
+		create_line(start_point, end_point, index)
 		
 func create_aim_line():
 		remove_aim_line()
@@ -71,19 +76,20 @@ func freed():
 	# if we don't have a ref it's been freed
 	!weakref(lines_container).get_ref()
 	
-func create_line(p1 : Vector2, p2 : Vector2, current_line_length):
-	# var line_instance = line2d_template.duplicate() as Line2D\
+func create_line(p1 : Vector2, p2 : Vector2, index):
 	var line2D = Line2D.new()
-	if(current_line_length <= (line_length * 3)):
-		line2D.default_color = Color(70, 194, 25, 1)
-	elif(current_line_length <= (line_length * 6)):
-		line2D.default_color = Color(194, 180, 25, 1)
-	elif(current_line_length <= (line_length * 9)):
-		line2D.default_color = Color(194, 79, 25, 1)
-	elif(current_line_length >= (line_length * 10)):
-		line2D.default_color = Color(194, 45, 25, 1)
-		
-	line2D.width = 2
+	line2D.set_default_color(Color8(194, 45, 25))
+	if(index <= 3):
+		line2D.set_default_color(Color8(70, 194, 25))
+	elif(index <= 6):
+		line2D.set_default_color(Color8(194, 180, 25))
+	elif(index <= 9):
+		line2D.set_default_color(Color8(194, 79, 25))
+	elif(index >= 10):
+		line2D.set_default_color(Color8(194, 45, 25))
+	
+	line2D.set_antialiased(true)
+	line2D.set_width(2.0)
 	line2D.add_point(p1)
 	line2D.add_point(p2)
 	lines_container.add_child(line2D)
