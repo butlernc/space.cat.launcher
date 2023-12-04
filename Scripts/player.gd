@@ -5,6 +5,7 @@ signal cat_launched
 var type = Globals.BODY_TYPE_CAT
 var force = 400
 var launched = false
+var landed = true
 var prime_reset = false
 
 var initial_position : Vector2
@@ -56,6 +57,7 @@ func _integrate_forces(state):
 		# print(state.linear_velocity)
 		if(abs(state.linear_velocity) < Vector2(5,5)):
 			reset_launcher()
+			landed = true
 			prime_reset = false
 		
 	if reset_rigidbody_state:
@@ -78,6 +80,7 @@ func _integrate_forces(state):
 				cat_launched.emit()
 				Globals.GUNNER_UI_ON = false
 				launched = true
+				landed = false
 				reset_rigidbody_state = false
 				state.apply_impulse(direction * force * (distance / 150))
 
