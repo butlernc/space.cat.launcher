@@ -74,7 +74,7 @@ func remove_aim_line():
 
 func freed():
 	# if we don't have a ref it's been freed
-	!weakref(lines_container).get_ref()
+	return !weakref(lines_container).get_ref()
 	
 func create_line(p1 : Vector2, p2 : Vector2, index):
 	var line2D = Line2D.new()

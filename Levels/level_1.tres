@@ -1,0 +1,14 @@
+[gd_resource type="JSON" format=3 uid="uid://btfp7piwjhvck"]
+
+[resource]
+data = [{
+"radius": 80.0,
+"sprite_path": "res://Art/Planets/big_planets13.png",
+"x": -159.0,
+"y": -200.0
+}, {
+"radius": 80.0,
+"sprite_path": "res://Art/Planets/big_planets16.png",
+"x": 200.0,
+"y": -300.0
+}]
