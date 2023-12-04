@@ -39,7 +39,6 @@ func refresh_aim_line():
 	create_aim_line()
 		
 	var mouse_position = get_global_mouse_position()
-	get_canvas_item()
 	var player_position = get_parent().get_node("Player").position
 	
 	var distance = player_position.distance_to(mouse_position)
@@ -53,7 +52,7 @@ func refresh_aim_line():
 		var end_point = (start_point + angle * individual_line_length)
 		
 		
-		create_line(start_point, end_point)
+		create_line(start_point, end_point, current_length)
 		
 func create_aim_line():
 		remove_aim_line()
@@ -69,9 +68,18 @@ func freed():
 	# if we don't have a ref it's been freed
 	!weakref(lines_container).get_ref()
 	
-func create_line(p1 : Vector2, p2 : Vector2):
+func create_line(p1 : Vector2, p2 : Vector2, current_line_length):
 	# var line_instance = line2d_template.duplicate() as Line2D\
 	var line2D = Line2D.new()
+	if(current_line_length <= (line_length * 3)):
+		line2D.default_color = Color(70, 194, 25, 1)
+	elif(current_line_length <= (line_length * 6)):
+		line2D.default_color = Color(194, 180, 25, 1)
+	elif(current_line_length <= (line_length * 9)):
+		line2D.default_color = Color(194, 79, 25, 1)
+	elif(current_line_length >= (line_length * 10)):
+		line2D.default_color = Color(194, 45, 25, 1)
+		
 	line2D.width = 2
 	line2D.add_point(p1)
 	line2D.add_point(p2)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=22 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
@@ -6,18 +6,32 @@
 [ext_resource type="Shape2D" uid="uid://ccc0qakgshsrb" path="res://Scenes/planet_2_coll_shape.tres" id="4_7f7df"]
 [ext_resource type="PackedScene" uid="uid://gxxh4g26ko7h" path="res://Scenes/HUD.tscn" id="4_7knsj"]
 [ext_resource type="Texture2D" uid="uid://cped3rbjbceg0" path="res://Art/Planets/small_planets1.png" id="6_cxciw"]
-[ext_resource type="Shape2D" uid="uid://blgrqoi0ahysh" path="res://Scenes/planet_3_coll_shape.tres" id="6_lbsq1"]
-[ext_resource type="Texture2D" uid="uid://bdbc57t3ybyms" path="res://Art/Planets/big_planets2.png" id="8_bv5t0"]
 [ext_resource type="Script" path="res://Scripts/planet.gd" id="8_ofrto"]
-[ext_resource type="Texture2D" uid="uid://c6ihkr33oo23k" path="res://Art/Planets/big_planets3.png" id="9_mwsff"]
+[ext_resource type="Texture2D" uid="uid://bhwl7tstiuovo" path="res://Art/Planets/big_planets7.png" id="8_t1reh"]
+[ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="9_mi3x8"]
 [ext_resource type="Texture2D" uid="uid://dt3btvevspftg" path="res://Art/Planets/big_planets5.png" id="10_5pnan"]
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
 [ext_resource type="Script" path="res://Scenes/orbit_planet.gd" id="11_5kv7q"]
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
 [ext_resource type="Script" path="res://Scenes/taco.gd" id="14_74kv6"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5mp7u"]
-radius = 124.48
+[sub_resource type="CircleShape2D" id="CircleShape2D_awq6l"]
+radius = 120.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8kgv"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kvn7h"]
+radius = 120.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgbvn"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hnp65"]
+radius = 120.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l5l4b"]
+radius = 80.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cjwf"]
 size = Vector2(20, 15.5)
@@ -35,7 +49,9 @@ position = Vector2(-155, 9)
 [node name="Player" parent="." instance=ExtResource("3_iwsuf")]
 texture_filter = 1
 position = Vector2(-155, 13)
-max_contacts_reported = 1
+collision_layer = 7
+collision_mask = 7
+max_contacts_reported = 2
 contact_monitor = true
 can_sleep = false
 freeze_mode = 1
@@ -63,77 +79,80 @@ script = ExtResource("10_lew55")
 
 [node name="Large" type="Node" parent="Planets"]
 
-[node name="Large 1" type="RigidBody2D" parent="Planets/Large"]
-position = Vector2(-158, 100)
-mass = 10000.0
-gravity_scale = 0.0
-can_sleep = false
-freeze = true
-script = ExtResource("8_ofrto")
-metadata/_edit_group_ = true
+[node name="PlanetA" type="Node2D" parent="Planets/Large"]
+position = Vector2(-159, 107)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 1"]
-shape = ExtResource("6_lbsq1")
-
-[node name="Texture" type="Sprite2D" parent="Planets/Large/Large 1"]
-texture_filter = 1
-texture = ExtResource("9_mwsff")
-
-[node name="gravity-well" type="Area2D" parent="Planets/Large/Large 1"]
+[node name="PlanetAGravityArea" type="Area2D" parent="Planets/Large/PlanetA"]
+collision_layer = 2
+collision_mask = 2
 gravity_space_override = 1
 gravity_point = true
-gravity = 200.0
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
 
-[node name="gravity-well-shape" type="CollisionShape2D" parent="Planets/Large/Large 1/gravity-well"]
-shape = SubResource("CircleShape2D_5mp7u")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetA/PlanetAGravityArea"]
+shape = SubResource("CircleShape2D_awq6l")
 
-[node name="Large 2" type="RigidBody2D" parent="Planets/Large"]
-position = Vector2(159, -184)
-mass = 10000.0
-gravity_scale = 0.0
-can_sleep = false
+[node name="PlanetABody" type="RigidBody2D" parent="Planets/Large/PlanetA"]
 freeze = true
 script = ExtResource("8_ofrto")
-metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 2"]
-shape = ExtResource("6_lbsq1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetA/PlanetABody"]
+shape = SubResource("CircleShape2D_d8kgv")
 
-[node name="Texture" type="Sprite2D" parent="Planets/Large/Large 2"]
-texture_filter = 1
-texture = ExtResource("8_bv5t0")
-
-[node name="gravity-well" type="Area2D" parent="Planets/Large/Large 2"]
-gravity_space_override = 1
-gravity_point = true
-gravity = 200.0
-
-[node name="gravity-well-shape" type="CollisionShape2D" parent="Planets/Large/Large 2/gravity-well"]
-shape = SubResource("CircleShape2D_5mp7u")
-
-[node name="Large 3" type="RigidBody2D" parent="Planets/Large"]
-position = Vector2(374, 87)
-mass = 10000.0
-gravity_scale = 0.0
-can_sleep = false
-freeze = true
-script = ExtResource("8_ofrto")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Large 3"]
-shape = ExtResource("6_lbsq1")
-
-[node name="Texture" type="Sprite2D" parent="Planets/Large/Large 3"]
-texture_filter = 1
+[node name="SpriteA2D" type="Sprite2D" parent="Planets/Large/PlanetA"]
 texture = ExtResource("10_5pnan")
 
-[node name="gravity-well" type="Area2D" parent="Planets/Large/Large 3"]
+[node name="PlanetB" type="Node2D" parent="Planets/Large"]
+position = Vector2(235, -61)
+
+[node name="PlanetBGravityArea" type="Area2D" parent="Planets/Large/PlanetB"]
+collision_layer = 2
+collision_mask = 2
 gravity_space_override = 1
 gravity_point = true
-gravity = 200.0
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
 
-[node name="gravity-well-shape" type="CollisionShape2D" parent="Planets/Large/Large 3/gravity-well"]
-shape = SubResource("CircleShape2D_5mp7u")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetB/PlanetBGravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/PlanetB"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetB/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="SpriteB2D" type="Sprite2D" parent="Planets/Large/PlanetB"]
+texture = ExtResource("8_t1reh")
+
+[node name="PlanetC" type="Node2D" parent="Planets/Large"]
+position = Vector2(259, 312)
+
+[node name="PlanetCGravityArea" type="Area2D" parent="Planets/Large/PlanetC"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetC/PlanetCGravityArea"]
+shape = SubResource("CircleShape2D_hnp65")
+
+[node name="PlanetCBody" type="RigidBody2D" parent="Planets/Large/PlanetC"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetC/PlanetCBody"]
+shape = SubResource("CircleShape2D_l5l4b")
+
+[node name="SpriteC" type="Sprite2D" parent="Planets/Large/PlanetC"]
+texture = ExtResource("9_mi3x8")
 
 [node name="Medium" type="Node" parent="Planets"]
 
@@ -141,6 +160,8 @@ shape = SubResource("CircleShape2D_5mp7u")
 
 [node name="Small 1" type="RigidBody2D" parent="Planets/Small"]
 position = Vector2(-50, 20)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("11_5kv7q")
 metadata/_edit_group_ = true
 
@@ -156,11 +177,9 @@ texture = ExtResource("6_cxciw")
 
 [node name="Taco" type="Node" parent="."]
 
-[node name="Taco 1" type="RigidBody2D" parent="Taco"]
-max_contacts_reported = 1
-contact_monitor = true
-freeze = true
-freeze_mode = 1
+[node name="Taco 1" type="Area2D" parent="Taco"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("14_74kv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1"]
@@ -174,9 +193,8 @@ texture = ExtResource("14_30eho")
 [connection signal="pressed" from="HUD/CanvasLayer/Reset" to="Player" method="reset"]
 [connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
 [connection signal="cat_launched" from="Player" to="HUD/CanvasLayer/TextureRect/CatCam" method="_on_cat_launched"]
-[connection signal="taco_collected" from="Player" to="." method="_on_taco_collected"]
-[connection signal="body_entered" from="Planets/Large/Large 3" to="Planets/Large/Large 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Taco/Taco 1" to="Taco/Taco 1" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1" to="." method="_on_taco_collected"]
 
 [editable path="HUD"]
 [editable path="Player"]

@@ -1,4 +1,5 @@
-extends RigidBody2D
+extends Area2D
+signal taco_collected
 
 var type = Globals.BODY_TYPE_TACO
 
@@ -10,3 +11,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func _on_body_entered(body):
+	if("type" in body):
+		print(body.name,body.type)
+		match(body.type):
+			Globals.BODY_TYPE_CAT:
+				taco_collected.emit()
+				queue_free()
+				
+				
