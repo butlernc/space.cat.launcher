@@ -8,16 +8,16 @@ func _process(delta):
 	pass
 	
 func _on_player_cat_landed():
-	var total_frames = sprite_frames.get_frame_count("landed")
-	var random_frame = randi() % total_frames
-	frame = random_frame
+	random_frame("landed")
 	
 func _on_player_cat_launched():
-	var total_frames = sprite_frames.get_frame_count("launched")
-	var random_frame = randi() % total_frames
-	frame = random_frame
+	random_frame("launched")
 	
 func _on_aim_lines_player_aiming():
-	var total_frames = sprite_frames.get_frame_count("player_aiming")
+	random_frame("player_aiming")
+
+
+func random_frame(context):
+	var total_frames = sprite_frames.get_frame_count(context)
 	var random_frame = randi() % total_frames
 	frame = random_frame
