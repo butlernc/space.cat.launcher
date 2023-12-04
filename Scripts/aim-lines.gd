@@ -1,5 +1,7 @@
 extends Node2D
 
+signal player_aiming
+
 var lines_container : Node2D
 
 var individual_line_length : int = 20
@@ -23,6 +25,7 @@ func _process(delta):
 func on_right_click():
 	if Globals.GUNNER_UI_ON:
 		refresh_aim_line()
+		player_aiming.emit()
 	
 func on_right_click_release():
 	remove_aim_line()

@@ -1,5 +1,6 @@
 extends RigidBody2D
 signal cat_launched
+signal cat_landed
 
 @onready var _animated_sprite = $AnimatedSprite2D
 var type = Globals.BODY_TYPE_CAT
@@ -59,6 +60,7 @@ func _integrate_forces(state):
 			reset_launcher()
 			landed = true
 			prime_reset = false
+			cat_landed.emit()
 			_animated_sprite.play("landed")
 		
 	if reset_rigidbody_state:
@@ -69,6 +71,7 @@ func _integrate_forces(state):
 		state.angular_velocity = 0
 		state.transform.origin = initial_position
 		state.apply_force(Vector2.ZERO)
+		cat_landed.emit()
 		
 	if Input.is_action_pressed("left_mouse_click"):
 		if !launched:
