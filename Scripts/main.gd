@@ -29,6 +29,7 @@ func generate_planets(planet_list):
 		
 
 func generate_planet(planet_config):
+	var planet_position = Vector2(0, 0)
 	var planet_radius = 80
 	var planet_gravity_radius = 120
 	var planet_sprite_path = "res://Art/Planets/big_planets11.png"
