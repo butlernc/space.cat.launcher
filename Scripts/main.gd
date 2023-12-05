@@ -26,6 +26,7 @@ func _on_taco_collected():
 	get_node("HUD/CanvasLayer/Score").text = str(score)
 	
 func generate_planets(planet_list):
+	print(planet_list)
 	for planet_config_map in planet_list.data:
 		var planet_config = PlanetConfig.new(planet_config_map)
 		planet_config.generate(self)

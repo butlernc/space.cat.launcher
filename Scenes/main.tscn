@@ -15,9 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="9_mi3x8"]
 [ext_resource type="Texture2D" uid="uid://dt3btvevspftg" path="res://Art/Planets/big_planets5.png" id="10_5pnan"]
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
-[ext_resource type="Script" path="res://Scenes/orbit_planet.gd" id="11_5kv7q"]
+[ext_resource type="Texture2D" uid="uid://cve6crqlern38" path="res://Art/Planets/big_planets14.png" id="11_1rfa5"]
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
 [ext_resource type="Script" path="res://Scenes/taco.gd" id="14_74kv6"]
+[ext_resource type="Script" path="res://Scripts/orbit_planet.gd" id="14_i5gc5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b3otj"]
 load_path = "res://.godot/imported/cat_planet1.png-ce950ed18f5e536c3761da1f525c70bb.ctex"
@@ -97,7 +98,6 @@ freeze_mode = 1
 position = Vector2(0.5, 0.25)
 
 [node name="Sprite2D" parent="Player" index="1"]
-visible = false
 texture_filter = 1
 texture = SubResource("CompressedTexture2D_b3otj")
 
@@ -126,7 +126,7 @@ script = ExtResource("10_lew55")
 [node name="Large" type="Node" parent="Planets"]
 
 [node name="PlanetA" type="Node2D" parent="Planets/Large"]
-position = Vector2(-159, 107)
+position = Vector2(-159, 111)
 
 [node name="PlanetAGravityArea" type="Area2D" parent="Planets/Large/PlanetA"]
 collision_layer = 2
@@ -149,6 +149,31 @@ shape = SubResource("CircleShape2D_d8kgv")
 
 [node name="SpriteA2D" type="Sprite2D" parent="Planets/Large/PlanetA"]
 texture = ExtResource("10_5pnan")
+
+[node name="PlanetA2" type="Node2D" parent="Planets/Large"]
+position = Vector2(-229, -255)
+
+[node name="PlanetAGravityArea" type="Area2D" parent="Planets/Large/PlanetA2"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetA2/PlanetAGravityArea"]
+shape = SubResource("CircleShape2D_awq6l")
+
+[node name="PlanetABody" type="RigidBody2D" parent="Planets/Large/PlanetA2"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetA2/PlanetABody"]
+shape = SubResource("CircleShape2D_d8kgv")
+
+[node name="SpriteA2D" type="Sprite2D" parent="Planets/Large/PlanetA2"]
+texture = ExtResource("11_1rfa5")
 
 [node name="PlanetB" type="Node2D" parent="Planets/Large"]
 position = Vector2(235, -61)
@@ -204,18 +229,20 @@ texture = ExtResource("9_mi3x8")
 
 [node name="Small" type="Node" parent="Planets"]
 
-[node name="Small 1" type="RigidBody2D" parent="Planets/Small"]
+[node name="Small1" type="Node2D" parent="Planets/Small"]
 position = Vector2(-50, 20)
+script = ExtResource("14_i5gc5")
+
+[node name="Small1RigidBody" type="RigidBody2D" parent="Planets/Small/Small1"]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("11_5kv7q")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Small/Small 1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Small/Small1/Small1RigidBody"]
 shape = ExtResource("4_7f7df")
 
-[node name="Texture" type="Sprite2D" parent="Planets/Small/Small 1"]
-position = Vector2(-0.42, 0)
+[node name="Texture" type="Sprite2D" parent="Planets/Small/Small1"]
+position = Vector2(-0.419998, 0)
 scale = Vector2(0.53, 0.53)
 texture = ExtResource("6_cxciw")
 

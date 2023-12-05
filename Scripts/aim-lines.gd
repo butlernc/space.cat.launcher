@@ -2,8 +2,8 @@ extends Node2D
 
 signal player_aiming
 
+var player_aiming_notified = false
 var lines_container : Node2D
-
 var individual_line_length : int = 20
 var line_spacing : int = 5
 var line_length : int = (individual_line_length + line_spacing)
@@ -25,9 +25,12 @@ func _process(delta):
 func on_right_click():
 	if Globals.GUNNER_UI_ON:
 		refresh_aim_line()
-		player_aiming.emit()
+		if(!player_aiming_notified):
+			player_aiming.emit()
+			player_aiming_notified = true
 	
 func on_right_click_release():
+	player_aiming_notified = false
 	remove_aim_line()
 
 func on_left_click():
