@@ -1,15 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=23 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
 [ext_resource type="PackedScene" uid="uid://fiu7pvwfesxw" path="res://Scenes/player.tscn" id="3_iwsuf"]
 [ext_resource type="Shape2D" uid="uid://ccc0qakgshsrb" path="res://Scenes/planet_2_coll_shape.tres" id="4_7f7df"]
 [ext_resource type="PackedScene" uid="uid://gxxh4g26ko7h" path="res://Scenes/HUD.tscn" id="4_7knsj"]
-[ext_resource type="Texture2D" uid="uid://r2i3fljn1v5a" path="res://Art/Cat/on-planet/cat_planet-1.png" id="5_ibglp"]
 [ext_resource type="Texture2D" uid="uid://cped3rbjbceg0" path="res://Art/Planets/small_planets1.png" id="6_cxciw"]
-[ext_resource type="Texture2D" uid="uid://di85bqdlk0poo" path="res://Art/Cat/on-planet/cat_planet-2.png" id="6_dgb61"]
-[ext_resource type="Texture2D" uid="uid://c6vp3q6kmnjbb" path="res://Art/Cat/on-planet/cat_planet-3.png" id="7_5hkqr"]
-[ext_resource type="Texture2D" uid="uid://2ae4nl3sislj" path="res://Art/Cat/on-planet/cat_planet-4.png" id="8_3ppsy"]
 [ext_resource type="Script" path="res://Scripts/planet.gd" id="8_ofrto"]
 [ext_resource type="Texture2D" uid="uid://bhwl7tstiuovo" path="res://Art/Planets/big_planets7.png" id="8_t1reh"]
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="9_mi3x8"]
@@ -19,39 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
 [ext_resource type="Script" path="res://Scenes/taco.gd" id="14_74kv6"]
 [ext_resource type="Script" path="res://Scripts/orbit_planet.gd" id="14_i5gc5"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b3otj"]
-load_path = "res://.godot/imported/cat_planet1.png-ce950ed18f5e536c3761da1f525c70bb.ctex"
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kegiy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_ibglp")
-}],
-"loop": true,
-"name": &"landed",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_dgb61")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_5hkqr")
-}],
-"loop": true,
-"name": &"launched",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_3ppsy")
-}],
-"loop": true,
-"name": &"player_aiming",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_awq6l"]
 radius = 120.0
@@ -96,27 +59,6 @@ freeze_mode = 1
 
 [node name="CollisionShape2D" parent="Player" index="0"]
 position = Vector2(0.5, 0.25)
-
-[node name="Sprite2D" parent="Player" index="1"]
-texture_filter = 1
-texture = SubResource("CompressedTexture2D_b3otj")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(188.06, 0)
-position_smoothing_enabled = true
-position_smoothing_speed = 3.0
-rotation_smoothing_enabled = true
-rotation_smoothing_speed = 3.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.1
-drag_top_margin = 0.1
-drag_right_margin = 0.1
-drag_bottom_margin = 0.1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-sprite_frames = SubResource("SpriteFrames_kegiy")
-animation = &"player_aiming"
 
 [node name="AimLines" type="Node2D" parent="."]
 script = ExtResource("10_lew55")
