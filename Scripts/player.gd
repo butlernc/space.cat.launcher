@@ -7,7 +7,9 @@ var type = Globals.BODY_TYPE_CAT
 var force = 400
 var launched = false
 var landed = true
+var landed_notified = true
 var prime_reset = false
+var is_aiming = false
 
 var initial_position : Vector2
 var initial_rotation : float
@@ -21,15 +23,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
-#	var colliding_bodies: Array = get_colliding_bodies()
-#    # Iterate through each colliding body
-#	for body in colliding_bodies:
-#        # Check if the colliding body is a RigidBody2D
-#		if body is RigidBody2D:
-#            # Get the force applied to this RigidBody2D by the colliding body
-#			var force_applied: Vector2 = get_force(body)
-#            # Print out information about the force
-#			print("Force from", body.name, ":", force_applied)
 #
 func on_left_click():
 	pass
@@ -46,7 +39,15 @@ func reset_launcher():
 
 func reset():
 	reset_launcher()
+	landed = true
+	landed_notified = true
+	is_aiming = false
 	reset_rigidbody_state = true
+	
+func emit_landing():
+	if(!landed_notified):
+		cat_landed.emit()
+		landed_notified = true
 	
 		
 func _integrate_forces(state):
@@ -60,7 +61,7 @@ func _integrate_forces(state):
 			reset_launcher()
 			landed = true
 			prime_reset = false
-			cat_landed.emit()
+			emit_landing()
 			_animated_sprite.play("landed")
 		
 	if reset_rigidbody_state:
@@ -71,9 +72,14 @@ func _integrate_forces(state):
 		state.angular_velocity = 0
 		state.transform.origin = initial_position
 		state.apply_force(Vector2.ZERO)
-		cat_landed.emit()
+		emit_landing()
 		
-	if Input.is_action_pressed("left_mouse_click"):
+	if Input.is_action_pressed("right_mouse_click"):
+		is_aiming = true
+	if Input.is_action_just_released("right_mouse_click"):
+		is_aiming = false
+		
+	if Input.is_action_pressed("left_mouse_click") && is_aiming:
 		if !launched:
 			var mouse_position = get_global_mouse_position()
 			var direction = (mouse_position - state.transform.origin).normalized()
@@ -85,6 +91,7 @@ func _integrate_forces(state):
 				Globals.GUNNER_UI_ON = false
 				launched = true
 				landed = false
+				landed_notified = false
 				reset_rigidbody_state = false
 				state.apply_impulse(direction * force * (distance / 150))
 				_animated_sprite.play("launched")

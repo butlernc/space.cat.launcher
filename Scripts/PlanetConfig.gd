@@ -4,7 +4,7 @@ var PLANET_GRAVITY_RADIUS_RATIO = 1.5
 var radius = 0
 var gravity_radius = 0
 var position = Vector2(0, 0)
-var orbit_planets = []
+var orbiting_planets = []
 var sprite_path = ""
 
 
@@ -14,8 +14,10 @@ func _init(config):
 	position = Vector2(config.x, config.y)
 	sprite_path = config.sprite_path
 	# TODO: add orbiting planets
+	if("orbiting_planets" in config): 
+		orbiting_planets = config.orbiting_planets
 	
-func generate(parent_node):
+func generate(top_node):
 	
 	# To generate a planet we need:
 	# Node2D for the wrapper/container w/config'd:
@@ -57,6 +59,7 @@ func generate(parent_node):
 	# radius: 80px (affected by size)
 	var rigid_body = RigidBody2D.new()
 	rigid_body.set_script(load("res://Scripts/planet.gd"))
+	
 	rigid_body.set_freeze_enabled(true)
 	rigid_body.set_freeze_mode(rigid_body.FREEZE_MODE_STATIC)
 	var rigid_body_cs = CollisionShape2D.new()
@@ -81,4 +84,20 @@ func generate(parent_node):
 	#
 	# Sprite2D
 	# texture: passed in
-	parent_node.add_child(container_node)
+	for orbiting_planet in orbiting_planets:
+		var orbiting_planet_container = Node2D.new()
+		var orbiting_planet_rigidbody = RigidBody2D.new()
+		var orbiting_planet_rigidbody_cs = CollisionShape2D.new()
+		var orbiting_planet_rigidbody_cs_cs = CircleShape2D.new()
+		orbiting_planet_rigidbody_cs_cs.set_radius(orbiting_planet.radius)
+		orbiting_planet_rigidbody_cs.set_shape(orbiting_planet_rigidbody_cs_cs)
+		orbiting_planet_rigidbody.add_child(orbiting_planet_rigidbody_cs)
+		orbiting_planet_container.set_script(load("res://Scripts/orbit_planet.gd"))
+		if("parent_planet" in orbiting_planet_container):
+			orbiting_planet_container.parent_planet = container_node
+		var orbiting_planet_sprite = Sprite2D.new()
+		orbiting_planet_sprite.set_texture(load(orbiting_planet.sprite_path))
+		orbiting_planet_container.add_child(orbiting_planet_rigidbody)
+		orbiting_planet_container.add_child(orbiting_planet_sprite)
+	
+	top_node.add_child(container_node)
