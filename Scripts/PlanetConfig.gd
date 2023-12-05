@@ -86,17 +86,21 @@ func generate(top_node):
 	# texture: passed in
 	for orbiting_planet in orbiting_planets:
 		var orbiting_planet_container = Node2D.new()
+		# add to parent immediately 
+		container_node.add_child(orbiting_planet_container)
+		# create rigid body
 		var orbiting_planet_rigidbody = RigidBody2D.new()
 		var orbiting_planet_rigidbody_cs = CollisionShape2D.new()
 		var orbiting_planet_rigidbody_cs_cs = CircleShape2D.new()
 		orbiting_planet_rigidbody_cs_cs.set_radius(orbiting_planet.radius)
 		orbiting_planet_rigidbody_cs.set_shape(orbiting_planet_rigidbody_cs_cs)
 		orbiting_planet_rigidbody.add_child(orbiting_planet_rigidbody_cs)
+		# set script
 		orbiting_planet_container.set_script(load("res://Scripts/orbit_planet.gd"))
-		if("parent_planet" in orbiting_planet_container):
-			orbiting_planet_container.parent_planet = container_node
+			
 		var orbiting_planet_sprite = Sprite2D.new()
 		orbiting_planet_sprite.set_texture(load(orbiting_planet.sprite_path))
+		# add rigidbody and texture to the orbiting planet's container
 		orbiting_planet_container.add_child(orbiting_planet_rigidbody)
 		orbiting_planet_container.add_child(orbiting_planet_sprite)
 	

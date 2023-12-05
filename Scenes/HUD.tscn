@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://gxxh4g26ko7h"]
+[gd_scene load_steps=41 format=3 uid="uid://gxxh4g26ko7h"]
 
 [ext_resource type="Script" path="res://Scripts/cat-cam.gd" id="1_36dhd"]
 [ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
@@ -35,6 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://cxdo6yjeqc1lg" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced23.png" id="31_3r7ep"]
 [ext_resource type="Texture2D" uid="uid://ck78ta4y5whbl" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced24.png" id="32_jbc2p"]
 [ext_resource type="Texture2D" uid="uid://cjwd3pobsml4b" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced30.png" id="33_07qgy"]
+[ext_resource type="Script" path="res://Scripts/timer.gd" id="36_7k8q7"]
+[ext_resource type="Texture2D" uid="uid://ckclmgc0wpbo7" path="res://Art/HUD/exit_button_shim.jpg" id="37_55lrq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3beex"]
 animations = [{
@@ -150,6 +152,14 @@ animations = [{
 "speed": 0.0
 }]
 
+[sub_resource type="SystemFont" id="SystemFont_ans1g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jicga"]
+font = SubResource("SystemFont_ans1g")
+font_size = 156
+font_color = Color(0.541176, 0.541176, 0.541176, 1)
+shadow_size = 0
+
 [node name="HUD" type="Control"]
 texture_filter = 1
 layout_mode = 3
@@ -185,3 +195,32 @@ offset_left = 704.0
 offset_top = 495.0
 offset_right = 744.0
 offset_bottom = 518.0
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 100.0
+script = ExtResource("36_7k8q7")
+
+[node name="TimerDisplay" type="Label" parent="CanvasLayer/Timer"]
+offset_left = 779.0
+offset_top = 495.0
+offset_right = 819.0
+offset_bottom = 518.0
+
+[node name="PauseHUD" type="CanvasGroup" parent="CanvasLayer"]
+process_mode = 2
+
+[node name="PauseLabel" type="Label" parent="CanvasLayer/PauseHUD"]
+offset_left = 133.0
+offset_top = 120.0
+offset_right = 735.0
+offset_bottom = 336.0
+text = "PAUSED"
+label_settings = SubResource("LabelSettings_jicga")
+uppercase = true
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/PauseHUD"]
+offset_left = 408.0
+offset_top = 346.0
+offset_right = 474.0
+offset_bottom = 395.0
+texture_normal = ExtResource("37_55lrq")
