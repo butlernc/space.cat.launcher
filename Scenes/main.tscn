@@ -116,7 +116,7 @@ drag_bottom_margin = 0.1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_kegiy")
-animation = &"launched"
+animation = &"player_aiming"
 
 [node name="AimLines" type="Node2D" parent="."]
 script = ExtResource("10_lew55")
