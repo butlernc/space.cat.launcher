@@ -76,8 +76,14 @@ func _integrate_forces(state):
 		
 	if Input.is_action_pressed("right_mouse_click"):
 		is_aiming = true
+		_animated_sprite.play("player_aiming")
 	if Input.is_action_just_released("right_mouse_click"):
 		is_aiming = false
+		_animated_sprite.play("landed")
+		if(launched):
+			_animated_sprite.play("launched")
+		
+		
 		
 	if Input.is_action_pressed("left_mouse_click") && is_aiming:
 		if !launched:
