@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	label.text = str(get_time_left())
+	label.text = "%d:%02d" % [floor(get_time_left() / 60), int(get_time_left()) % 60]
 	
 func on_game_start():
 	start(120)
