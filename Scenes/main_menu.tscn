@@ -1,13 +1,29 @@
-[gd_scene load_steps=12 format=3 uid="uid://cg0nu75w13bcw"]
+[gd_scene load_steps=13 format=3 uid="uid://cg0nu75w13bcw"]
 
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="1_himy0"]
 [ext_resource type="Texture2D" uid="uid://ccc8uxwb46l6u" path="res://Art/Planets/big_planets16.png" id="2_vmsd8"]
 [ext_resource type="Texture2D" uid="uid://qajaao131ahe" path="res://Art/Planets/big_planets6.png" id="3_up1rx"]
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="4_kf52c"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="5_axxuj"]
-[ext_resource type="Texture2D" uid="uid://bgkqljeani4td" path="res://Art/HUD/play_button_shim.jpg" id="6_da5hb"]
+[ext_resource type="Texture2D" uid="uid://ch3ux6vvlgjq1" path="res://Art/HUD/launch_button.png" id="6_8x0oy"]
 [ext_resource type="AudioStream" uid="uid://dddd4woub1k5c" path="res://Audio/intro_charlie.wav" id="7_4hmru"]
 [ext_resource type="Script" path="res://Scripts/audio_controller.gd" id="7_6fdy5"]
+[ext_resource type="Texture2D" uid="uid://d3qvtv0ya5l2m" path="res://Art/HUD/title-screen.png" id="9_q87xi"]
+
+[sub_resource type="Animation" id="Animation_vjies"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
 
 [sub_resource type="Animation" id="Animation_obvnb"]
 resource_name = "fade"
@@ -23,21 +39,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 0.267943),
 "update": 0,
 "values": [-80.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_vjies"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-80.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2boo8"]
@@ -68,6 +69,11 @@ texture = ExtResource("3_up1rx")
 position = Vector2(261, 431)
 texture = ExtResource("4_kf52c")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 960.0
+offset_bottom = 540.0
+texture = ExtResource("9_q87xi")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -77,12 +83,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="StartButton" type="TextureButton" parent="Control"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 444.0
-offset_top = 249.0
-offset_right = 522.0
-offset_bottom = 299.0
-texture_normal = ExtResource("6_da5hb")
+offset_left = 311.0
+offset_top = 222.0
+offset_right = 647.0
+offset_bottom = 430.0
+texture_normal = ExtResource("6_8x0oy")
 
 [node name="Music" type="Node" parent="."]
 script = ExtResource("7_6fdy5")
