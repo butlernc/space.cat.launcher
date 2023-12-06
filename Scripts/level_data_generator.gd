@@ -62,6 +62,10 @@ func generate_starting_planet():
 	
 func generate_celestial_bodies():
 	pass
+	
+func generate_tacos(celestial_bodies):
+	pass
+	
 
 func generate_planet():
 	# var ab_check = generate_asteroid_belt_check()
