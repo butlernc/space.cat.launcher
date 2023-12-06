@@ -50,6 +50,10 @@ script = ExtResource("1_wjwf8")
 [node name="HUD" parent="." instance=ExtResource("4_7knsj")]
 process_mode = 1
 
+[node name="Reset" parent="HUD/CanvasLayer" index="1"]
+offset_top = 470.0
+offset_bottom = 536.0
+
 [node name="Timer" parent="HUD/CanvasLayer" index="3"]
 one_shot = true
 
@@ -267,7 +271,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
 [connection signal="start" from="." to="HUD/CanvasLayer/Timer" method="on_game_start"]
-[connection signal="pressed" from="HUD/CanvasLayer/Reset" to="Player" method="reset"]
+[connection signal="pressed" from="HUD/CanvasLayer/Reset" to="Player" method="_on_reset_pressed"]
 [connection signal="timeout" from="HUD/CanvasLayer/Timer" to="." method="_on_timer_finished"]
 [connection signal="pressed" from="HUD/CanvasLayer/PauseHUD/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]

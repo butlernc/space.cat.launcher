@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://gxxh4g26ko7h"]
+[gd_scene load_steps=42 format=3 uid="uid://gxxh4g26ko7h"]
 
 [ext_resource type="Script" path="res://Scripts/cat-cam.gd" id="1_36dhd"]
 [ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
@@ -34,8 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://cxdo6yjeqc1lg" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced23.png" id="31_3r7ep"]
 [ext_resource type="Texture2D" uid="uid://ck78ta4y5whbl" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced24.png" id="32_jbc2p"]
 [ext_resource type="Texture2D" uid="uid://cjwd3pobsml4b" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced30.png" id="33_07qgy"]
+[ext_resource type="Texture2D" uid="uid://b1q7pqmn5t2fi" path="res://Art/HUD/restart_button.png" id="35_ejni8"]
 [ext_resource type="Script" path="res://Scripts/timer.gd" id="36_7k8q7"]
 [ext_resource type="Texture2D" uid="uid://ckclmgc0wpbo7" path="res://Art/HUD/exit_button_shim.jpg" id="37_55lrq"]
+[ext_resource type="Texture2D" uid="uid://c18x6ack1f4d" path="res://Art/HUD/pngwing.com (1).png" id="38_717gn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3beex"]
 animations = [{
@@ -176,24 +178,30 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_iel0u")
 
+[node name="Pngwing_com(1)" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+position = Vector2(731, 88)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("38_717gn")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/TextureRect"]
 position = Vector2(898, 129)
 sprite_frames = SubResource("SpriteFrames_3beex")
 animation = &"player_aiming"
 script = ExtResource("1_36dhd")
 
-[node name="Reset" type="Button" parent="CanvasLayer"]
-offset_left = 31.0
-offset_top = 489.0
-offset_right = 82.0
-offset_bottom = 520.0
-text = "Reset"
+[node name="Reset" type="TextureButton" parent="CanvasLayer"]
+offset_left = 7.0
+offset_top = 471.0
+offset_right = 98.0
+offset_bottom = 537.0
+texture_normal = ExtResource("35_ejni8")
 
 [node name="Score" type="Label" parent="CanvasLayer"]
-offset_left = 704.0
-offset_top = 495.0
-offset_right = 744.0
-offset_bottom = 518.0
+offset_left = 633.0
+offset_top = 496.0
+offset_right = 673.0
+offset_bottom = 519.0
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 100.0
