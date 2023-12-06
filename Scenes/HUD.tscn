@@ -152,6 +152,7 @@ animations = [{
 }]
 
 [sub_resource type="SystemFont" id="SystemFont_ans1g"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_jicga"]
 font = SubResource("SystemFont_ans1g")

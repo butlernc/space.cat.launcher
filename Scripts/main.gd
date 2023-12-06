@@ -20,7 +20,6 @@ func _process(_delta):
 		else:
 			pause()
 		
-		
 
 func new_game():
 	$Player.start($StartPosition.position)
@@ -54,7 +53,6 @@ func resume():
 	pause_overlay.hide()
 	
 func _on_exit_button_pressed():
-	print("exit button pressed")
 	resume()
 	Globals.change_to_menu_scene()
 		

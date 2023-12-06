@@ -45,3 +45,4 @@ func apply_kepler_orbit(delta: float) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	apply_kepler_orbit(delta)
+

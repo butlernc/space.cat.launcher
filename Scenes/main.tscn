@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="9_mi3x8"]
 [ext_resource type="Texture2D" uid="uid://bgg6wltno8ta0" path="res://Art/Planets/big_planets4.png" id="10_5hcy7"]
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
-[ext_resource type="Script" path="res://Scripts/orbit_planet.gd" id="11_0mtxn"]
 [ext_resource type="Texture2D" uid="uid://cve6crqlern38" path="res://Art/Planets/big_planets14.png" id="11_1rfa5"]
+[ext_resource type="Script" path="res://Scripts/moon.gd" id="11_4qhwm"]
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
 [ext_resource type="Script" path="res://Scenes/taco.gd" id="14_74kv6"]
 [ext_resource type="Texture2D" uid="uid://brvvw0yh8ikh8" path="res://Art/Planets/asteroids5.png" id="14_j64qo"]
@@ -185,7 +185,7 @@ texture = ExtResource("10_5hcy7")
 
 [node name="Small1" type="Node2D" parent="Planets/Small"]
 position = Vector2(-50, 20)
-script = ExtResource("11_0mtxn")
+script = ExtResource("11_4qhwm")
 
 [node name="Small1RigidBody" type="RigidBody2D" parent="Planets/Small/Small1"]
 collision_layer = 2
