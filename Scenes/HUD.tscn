@@ -34,10 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://cxdo6yjeqc1lg" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced23.png" id="31_3r7ep"]
 [ext_resource type="Texture2D" uid="uid://ck78ta4y5whbl" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced24.png" id="32_jbc2p"]
 [ext_resource type="Texture2D" uid="uid://cjwd3pobsml4b" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced30.png" id="33_07qgy"]
+[ext_resource type="Texture2D" uid="uid://baqmool7ijt8u" path="res://Art/HUD/pngkey.com-scanlines-png-994881.png" id="35_cwaao"]
 [ext_resource type="Texture2D" uid="uid://b1q7pqmn5t2fi" path="res://Art/HUD/restart_button.png" id="35_ejni8"]
 [ext_resource type="Script" path="res://Scripts/timer.gd" id="36_7k8q7"]
 [ext_resource type="Texture2D" uid="uid://ckclmgc0wpbo7" path="res://Art/HUD/exit_button_shim.jpg" id="37_55lrq"]
-[ext_resource type="Texture2D" uid="uid://c18x6ack1f4d" path="res://Art/HUD/pngwing.com (1).png" id="38_717gn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3beex"]
 animations = [{
@@ -174,21 +174,23 @@ grow_vertical = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -2.0
+offset_right = 958.0
+offset_bottom = 540.0
 texture = ExtResource("1_iel0u")
-
-[node name="Pngwing_com(1)" type="Sprite2D" parent="CanvasLayer/TextureRect"]
-texture_filter = 1
-position = Vector2(731, 88)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("38_717gn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/TextureRect"]
 position = Vector2(898, 129)
 sprite_frames = SubResource("SpriteFrames_3beex")
 animation = &"player_aiming"
 script = ExtResource("1_36dhd")
+
+[node name="TextureRect2" type="Polygon2D" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+position = Vector2(803, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("35_cwaao")
+polygon = PackedVector2Array(92, 26, 102, 24, 188, 24, 218, 24, 274, 24, 278, 64, 282, 74, 288, 104, 288, 122, 290, 138, 292, 146, 300, 206, 300, 216, 298, 218, 290, 218, 288, 220, 268, 220, 268, 222, 254, 222, 252, 224, 212, 224, 106, 224, 106, 222, 102, 222, 102, 206, 100, 206, 100, 196, 102, 196, 102, 188, 98, 186, 96, 162, 96, 106, 94, 104, 94, 36, 92, 34)
 
 [node name="Reset" type="TextureButton" parent="CanvasLayer"]
 offset_left = 7.0
