@@ -66,6 +66,15 @@ freeze_mode = 1
 [node name="CollisionShape2D" parent="Player" index="0"]
 position = Vector2(0.5, 0.25)
 
+[node name="MainCamera" type="Camera2D" parent="Player"]
+process_mode = 1
+position = Vector2(155, -13)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("16_akyki")
+
 [node name="AimLines" type="Node2D" parent="."]
 process_mode = 1
 script = ExtResource("10_lew55")
@@ -225,10 +234,7 @@ position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
-[node name="MainCamera" type="Camera2D" parent="."]
-process_mode = 1
-script = ExtResource("16_akyki")
-
+[connection signal="start" from="." to="HUD/CanvasLayer/TextureRect/Light" method="_on_scene_start"]
 [connection signal="start" from="." to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_scene_start"]
 [connection signal="start" from="." to="HUD/CanvasLayer/Timer" method="on_game_start"]
 [connection signal="pressed" from="HUD/CanvasLayer/Reset" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_reset_pressed"]

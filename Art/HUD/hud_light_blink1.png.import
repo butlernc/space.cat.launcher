@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckclmgc0wpbo7"
-path="res://.godot/imported/exit_button_shim.jpg-008fc6929280ee55d862fb38442c5a41.ctex"
+uid="uid://cfcsr35jqmxui"
+path="res://.godot/imported/hud_light_blink1.png-b7fee3399affb16a36e96d8044c3e4b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/HUD/exit_button_shim.jpg"
-dest_files=["res://.godot/imported/exit_button_shim.jpg-008fc6929280ee55d862fb38442c5a41.ctex"]
+source_file="res://Art/HUD/hud_light_blink1.png"
+dest_files=["res://.godot/imported/hud_light_blink1.png-b7fee3399affb16a36e96d8044c3e4b8.ctex"]
 
 [params]
 

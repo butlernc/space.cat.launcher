@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wwvyov81o5h8"
-path="res://.godot/imported/hud-overlay1.png-25b8a7a870166f3e18d627413c2c06d2.ctex"
+uid="uid://r86k0w37fsm4"
+path="res://.godot/imported/menu_button.png-7a3da571bda172c2dfbae235a8e2a49f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/HUD/hud-overlay1.png"
-dest_files=["res://.godot/imported/hud-overlay1.png-25b8a7a870166f3e18d627413c2c06d2.ctex"]
+source_file="res://Art/HUD/menu_button.png"
+dest_files=["res://.godot/imported/menu_button.png-7a3da571bda172c2dfbae235a8e2a49f.ctex"]
 
 [params]
 
