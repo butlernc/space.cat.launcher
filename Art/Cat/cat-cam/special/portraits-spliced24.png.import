@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ny40hnori8bd"
-path="res://.godot/imported/portraits-spliced14.png-fad4e8f2d4e9c8e6284071c1c2a8e16a.ctex"
+uid="uid://ck78ta4y5whbl"
+path="res://.godot/imported/portraits-spliced24.png-441c717dbd1933a49c04711999351547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Cat/cat-cam/player_aiming/portraits-spliced14.png"
-dest_files=["res://.godot/imported/portraits-spliced14.png-fad4e8f2d4e9c8e6284071c1c2a8e16a.ctex"]
+source_file="res://Art/Cat/cat-cam/special/portraits-spliced24.png"
+dest_files=["res://.godot/imported/portraits-spliced24.png-441c717dbd1933a49c04711999351547.ctex"]
 
 [params]
 

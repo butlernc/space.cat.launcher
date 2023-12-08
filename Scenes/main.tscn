@@ -270,7 +270,9 @@ position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
+[connection signal="start" from="." to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_scene_start"]
 [connection signal="start" from="." to="HUD/CanvasLayer/Timer" method="on_game_start"]
+[connection signal="pressed" from="HUD/CanvasLayer/Reset" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_reset_pressed"]
 [connection signal="pressed" from="HUD/CanvasLayer/Reset" to="Player" method="_on_reset_pressed"]
 [connection signal="timeout" from="HUD/CanvasLayer/Timer" to="." method="_on_timer_finished"]
 [connection signal="pressed" from="HUD/CanvasLayer/PauseHUD/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://gxxh4g26ko7h"]
+[gd_scene load_steps=41 format=3 uid="uid://gxxh4g26ko7h"]
 
 [ext_resource type="Script" path="res://Scripts/cat-cam.gd" id="1_36dhd"]
 [ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
@@ -9,11 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bf8cvcsb4tt6o" path="res://Art/Cat/cat-cam/landed/portraits-landed5.png" id="6_60okl"]
 [ext_resource type="Texture2D" uid="uid://i0lrhnjim0s0" path="res://Art/Cat/cat-cam/landed/portraits-landed6.png" id="7_xoexp"]
 [ext_resource type="Texture2D" uid="uid://o4tsomwn8ovf" path="res://Art/Cat/cat-cam/landed/portraits-landed7.png" id="8_gfgnp"]
-[ext_resource type="Texture2D" uid="uid://1wwib2j4bw5r" path="res://Art/Cat/cat-cam/landed/portraits-landed8.png" id="9_jew5s"]
-[ext_resource type="Texture2D" uid="uid://c4lw7orsqxgwu" path="res://Art/Cat/cat-cam/landed/portraits-landed9.png" id="10_kg10t"]
+[ext_resource type="Texture2D" uid="uid://c4lw7orsqxgwu" path="res://Art/Cat/cat-cam/special/portraits-landed9.png" id="10_30lm3"]
 [ext_resource type="Texture2D" uid="uid://c170a4evppet4" path="res://Art/Cat/cat-cam/landed/portraits-landed10.png" id="11_mqtf6"]
 [ext_resource type="Texture2D" uid="uid://ginc43i8ot63" path="res://Art/Cat/cat-cam/landed/portraits-landed11.png" id="12_fg3qg"]
-[ext_resource type="Texture2D" uid="uid://ba1j74xfmqku7" path="res://Art/Cat/cat-cam/landed/portraits-landed12.png" id="13_pgebo"]
+[ext_resource type="Texture2D" uid="uid://ba1j74xfmqku7" path="res://Art/Cat/cat-cam/special/portraits-landed12.png" id="13_weqwy"]
 [ext_resource type="Texture2D" uid="uid://2nrpow3xnr7f" path="res://Art/Cat/cat-cam/landed/portraits-landed13.png" id="14_ho1gx"]
 [ext_resource type="Texture2D" uid="uid://h12xuppshtdr" path="res://Art/Cat/cat-cam/launched/portraits-spliced5.png" id="15_7jio2"]
 [ext_resource type="Texture2D" uid="uid://dtiu7ao87jags" path="res://Art/Cat/cat-cam/launched/portraits-spliced8.png" id="16_rgum2"]
@@ -23,16 +22,16 @@
 [ext_resource type="Texture2D" uid="uid://dmhc6p14txv6v" path="res://Art/Cat/cat-cam/launched/portraits-spliced25.png" id="20_t7mbp"]
 [ext_resource type="Texture2D" uid="uid://ch5x4ygrpcqcv" path="res://Art/Cat/cat-cam/launched/portraits-spliced27.png" id="21_ea8i2"]
 [ext_resource type="Texture2D" uid="uid://ca508ngrn7oc7" path="res://Art/Cat/cat-cam/launched/portraits-spliced29.png" id="22_1ktcj"]
-[ext_resource type="Texture2D" uid="uid://cqvjawv7ftcv3" path="res://Art/Cat/cat-cam/launched/portraits-spliced32.png" id="23_dxgkf"]
 [ext_resource type="Texture2D" uid="uid://ewjd4gf3iyl7" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced2.png" id="24_r03o2"]
 [ext_resource type="Texture2D" uid="uid://bn6ofedvkhdbe" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced9.png" id="25_lx4ye"]
 [ext_resource type="Texture2D" uid="uid://c58vout3ujp20" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced10.png" id="26_4fil7"]
 [ext_resource type="Texture2D" uid="uid://difpb2lp4wmio" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced12.png" id="27_xhbh7"]
-[ext_resource type="Texture2D" uid="uid://ny40hnori8bd" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced14.png" id="28_xieyj"]
+[ext_resource type="Texture2D" uid="uid://ny40hnori8bd" path="res://Art/Cat/cat-cam/special/portraits-spliced14.png" id="28_p721e"]
 [ext_resource type="Texture2D" uid="uid://coi2q1c2vy3hg" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced17.png" id="29_xhsgq"]
 [ext_resource type="Texture2D" uid="uid://dd7283ha7hpsb" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced19.png" id="30_u3a4w"]
-[ext_resource type="Texture2D" uid="uid://cxdo6yjeqc1lg" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced23.png" id="31_3r7ep"]
-[ext_resource type="Texture2D" uid="uid://ck78ta4y5whbl" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced24.png" id="32_jbc2p"]
+[ext_resource type="Texture2D" uid="uid://cxdo6yjeqc1lg" path="res://Art/Cat/cat-cam/special/portraits-spliced23.png" id="31_ke00l"]
+[ext_resource type="Texture2D" uid="uid://cqvjawv7ftcv3" path="res://Art/Cat/cat-cam/special/portraits-spliced32.png" id="32_7fpy7"]
+[ext_resource type="Texture2D" uid="uid://ck78ta4y5whbl" path="res://Art/Cat/cat-cam/special/portraits-spliced24.png" id="32_465ea"]
 [ext_resource type="Texture2D" uid="uid://cjwd3pobsml4b" path="res://Art/Cat/cat-cam/player_aiming/portraits-spliced30.png" id="33_07qgy"]
 [ext_resource type="Texture2D" uid="uid://baqmool7ijt8u" path="res://Art/HUD/pngkey.com-scanlines-png-994881.png" id="35_cwaao"]
 [ext_resource type="Texture2D" uid="uid://b1q7pqmn5t2fi" path="res://Art/HUD/restart_button.png" id="35_ejni8"]
@@ -44,7 +43,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_fwjde")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_v1utr")
 }, {
@@ -64,19 +68,10 @@ animations = [{
 "texture": ExtResource("8_gfgnp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_jew5s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_kg10t")
-}, {
-"duration": 1.0,
 "texture": ExtResource("11_mqtf6")
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_fg3qg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_pgebo")
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_ho1gx")
@@ -109,9 +104,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("22_1ktcj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_dxgkf")
 }],
 "loop": true,
 "name": &"launched",
@@ -128,28 +120,42 @@ animations = [{
 "texture": ExtResource("26_4fil7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_xhbh7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_xieyj")
-}, {
-"duration": 1.0,
 "texture": ExtResource("29_xhsgq")
 }, {
 "duration": 1.0,
 "texture": ExtResource("30_u3a4w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_3r7ep")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_jbc2p")
-}, {
-"duration": 1.0,
 "texture": ExtResource("33_07qgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xhbh7")
 }],
 "loop": true,
 "name": &"player_aiming",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_30lm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_weqwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_p721e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ke00l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_465ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_7fpy7")
+}],
+"loop": true,
+"name": &"special",
 "speed": 0.0
 }]
 
@@ -182,7 +188,6 @@ texture = ExtResource("1_iel0u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/TextureRect"]
 position = Vector2(898, 129)
 sprite_frames = SubResource("SpriteFrames_3beex")
-animation = &"player_aiming"
 script = ExtResource("1_36dhd")
 
 [node name="TextureRect2" type="Polygon2D" parent="CanvasLayer/TextureRect"]
