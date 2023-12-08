@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=23 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
@@ -9,12 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://bhwl7tstiuovo" path="res://Art/Planets/big_planets7.png" id="8_t1reh"]
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="9_mi3x8"]
 [ext_resource type="Script" path="res://Scripts/gravity_area.gd" id="10_0u8vn"]
-[ext_resource type="Texture2D" uid="uid://bgg6wltno8ta0" path="res://Art/Planets/big_planets4.png" id="10_5hcy7"]
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
 [ext_resource type="Texture2D" uid="uid://cve6crqlern38" path="res://Art/Planets/big_planets14.png" id="11_1rfa5"]
 [ext_resource type="Script" path="res://Scripts/moon.gd" id="11_4qhwm"]
+[ext_resource type="PackedScene" uid="uid://cgq1ad5qym4ae" path="res://Scenes/planet.tscn" id="13_gqxa8"]
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
 [ext_resource type="Script" path="res://Scenes/taco.gd" id="14_74kv6"]
+[ext_resource type="Script" path="res://Scenes/main_camera.gd" id="16_akyki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uxhv"]
 radius = 12.0
@@ -29,12 +30,6 @@ radius = 80.0
 radius = 250.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fgbvn"]
-radius = 80.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hnp65"]
-radius = 250.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_l5l4b"]
 radius = 80.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cjwf"]
@@ -52,9 +47,6 @@ process_mode = 1
 [node name="Reset" parent="HUD/CanvasLayer" index="1"]
 offset_top = 470.0
 offset_bottom = 536.0
-
-[node name="Timer" parent="HUD/CanvasLayer" index="3"]
-one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(-155, 9)
@@ -181,35 +173,7 @@ shape = SubResource("CircleShape2D_fgbvn")
 [node name="Sprite" type="Sprite2D" parent="Planets/Large/PlanetB"]
 texture = ExtResource("8_t1reh")
 
-[node name="PlanetC" type="Node2D" parent="Planets/Large"]
-position = Vector2(259, 312)
-
-[node name="GravityArea" type="Area2D" parent="Planets/Large/PlanetC"]
-collision_layer = 2
-collision_mask = 2
-gravity_space_override = 1
-gravity_point = true
-gravity_point_unit_distance = 80.0
-gravity_point_center = Vector2(0, 0)
-gravity_direction = Vector2(0, 0)
-linear_damp_space_override = 2
-script = ExtResource("10_0u8vn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetC/GravityArea"]
-shape = SubResource("CircleShape2D_hnp65")
-
-[node name="PlanetCBody" type="RigidBody2D" parent="Planets/Large/PlanetC"]
-freeze = true
-freeze_mode = 1
-constant_torque = 4.345
-script = ExtResource("8_ofrto")
-has_asteroid_belt = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetC/PlanetCBody"]
-shape = SubResource("CircleShape2D_l5l4b")
-
-[node name="Sprite" type="Sprite2D" parent="Planets/Large/PlanetC"]
-texture = ExtResource("10_5hcy7")
+[node name="PlanetC" parent="Planets/Large" instance=ExtResource("13_gqxa8")]
 
 [node name="Medium" type="Node" parent="Planets"]
 
@@ -233,18 +197,55 @@ position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
+[node name="Taco 2" type="Area2D" parent="Taco"]
+position = Vector2(710, 335)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 3" type="Area2D" parent="Taco"]
+position = Vector2(434, -137)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 3"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 3"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="MainCamera" type="Camera2D" parent="."]
+process_mode = 1
+script = ExtResource("16_akyki")
+
 [connection signal="start" from="." to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_scene_start"]
 [connection signal="start" from="." to="HUD/CanvasLayer/Timer" method="on_game_start"]
 [connection signal="pressed" from="HUD/CanvasLayer/Reset" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_reset_pressed"]
 [connection signal="pressed" from="HUD/CanvasLayer/Reset" to="Player" method="_on_reset_pressed"]
-[connection signal="timeout" from="HUD/CanvasLayer/Timer" to="." method="_on_timer_finished"]
-[connection signal="pressed" from="HUD/CanvasLayer/PauseHUD/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="HUD/CanvasLayer/PauseHUD/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="HUD/CanvasLayer/PauseHUD/ExitGameButton" to="." method="_on_exit_game_button_pressed"]
 [connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
 [connection signal="cat_landed" from="Player" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_player_cat_landed"]
+[connection signal="cat_launched" from="Player" to="." method="_on_cat_launched"]
 [connection signal="cat_launched" from="Player" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_player_cat_launched"]
 [connection signal="player_aiming" from="AimLines" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_aim_lines_player_aiming"]
 [connection signal="body_entered" from="Taco/Taco 1" to="Taco/Taco 1" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 1" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2" to="Taco/Taco 2" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 3" to="Taco/Taco 3" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 3" to="." method="_on_taco_collected"]
 
 [editable path="HUD"]
 [editable path="Player"]
