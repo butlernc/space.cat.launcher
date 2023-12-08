@@ -9,6 +9,8 @@ var ASTEROID_SIZE_SMALL = 0.1
 var ASTEROID_SIZE_MEDIUM = 0.2
 var ASTEROID_SIZE_LARGE = 0.3
 var SCORE_LIMIT = 10
+var shots_taken = 0
+
 
 func change_to_main_scene():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")

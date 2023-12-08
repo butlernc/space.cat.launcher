@@ -4,7 +4,8 @@ signal cat_landed
 
 @onready var _animated_sprite = $AnimatedSprite2D
 var type = Globals.BODY_TYPE_CAT
-var force = 400
+#var force = 400
+var force = 400 * 15
 var launched = false
 var landed = true
 var landed_notified = true

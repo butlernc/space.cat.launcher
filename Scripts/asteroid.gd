@@ -7,15 +7,15 @@ var mean_anomaly
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	semi_major_axis = randi_range(100, 300)
-	eccentricity = randi_range(0.1, 0.5)
-	orbital_speed = randi_range(20, 80)
-	mean_anomaly = randi_range(0, 360)
+	semi_major_axis = randi_range(120, 150)
+	eccentricity = 0
+	orbital_speed = randf_range(.1, .15)
+	mean_anomaly = randi_range(0, 500)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	apply_kepler_orbit(delta)
 
 
 	

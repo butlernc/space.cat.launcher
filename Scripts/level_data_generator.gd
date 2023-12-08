@@ -36,10 +36,7 @@ func save_to_file(json):
 # more items, I'll add them here later.
 
 # We'll need helper functions that get random textures.
-func get_asteroid_texture():
-	# Returns random integer between 1 and 90
-	var random_number = randi() % 90 + 1
-	return "res://Art/Planets/asteroids" + str(random_number) + ".png"
+
 
 
 # first we need to think about generating one planet. Since we want the generator to create the

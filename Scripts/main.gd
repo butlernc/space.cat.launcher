@@ -24,7 +24,7 @@ func _process(_delta):
 func new_game():
 	$Player.start($StartPosition.position)
 	pause_overlay = get_node("HUD/CanvasLayer/PauseHUD")
-	generate_planets(load("res://Levels/level_1.tres"))
+	# generate_planets(load("res://Levels/level_1.tres"))
 	pause_overlay.hide()
 	start.emit()
 	
@@ -35,7 +35,6 @@ func _on_taco_collected():
 		winner_winner.emit()
 	
 func generate_planets(planet_list):
-	print(planet_list)
 	for planet_config_map in planet_list.data:
 		var planet_config = PlanetConfig.new(planet_config_map)
 		planet_config.generate(self)

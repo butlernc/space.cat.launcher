@@ -3,13 +3,15 @@ extends Node2D
 # Kepler Orbit Parameters
 @export var semi_major_axis : float = 200.0  # Semi-major axis of the orbit
 var eccentricity : float = 0.1        # Eccentricity of the orbit aka how oblong
-var orbital_speed : float = 0.5     # Orbital speed
+var orbital_speed : float = 0.1     # Orbital speed
 # Mean anomaly is a persistent value, so we'll track it across frames
 var mean_anomaly : float = 0.0
+var is_clockwise_orbit = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	var which_way = randi_range(0, 10)
+	is_clockwise_orbit = which_way > 5
 
 func clockwise_orbit(delta): 
 	# "positive orbit"
@@ -22,7 +24,7 @@ func counter_clockwise_orbit(delta):
 # Function to update the position based on Kepler orbit
 func apply_kepler_orbit(delta: float) -> void:
 	# Update mean anomaly based on orbital speed
-	mean_anomaly = counter_clockwise_orbit(delta)
+	mean_anomaly = clockwise_orbit(delta) if is_clockwise_orbit else counter_clockwise_orbit(delta)
 
 	# Calculate eccentric anomaly using an iterative method (Newton's method)
 	var eccentric_anomaly : float = mean_anomaly

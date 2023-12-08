@@ -71,6 +71,7 @@ func generate(top_node):
 	# Sprite2D
 	# texture: passed in
 	var planet_sprite = Sprite2D.new()
+	planet_sprite.name = "Sprite"
 	print(sprite_path)
 	planet_sprite.set_texture(load(sprite_path))
 	container_node.add_child(planet_sprite)
@@ -96,7 +97,7 @@ func generate(top_node):
 		orbiting_planet_rigidbody_cs.set_shape(orbiting_planet_rigidbody_cs_cs)
 		orbiting_planet_rigidbody.add_child(orbiting_planet_rigidbody_cs)
 		# set script
-		orbiting_planet_container.set_script(load("res://Scripts/orbit_planet.gd"))
+		orbiting_planet_container.set_script(load("res://Scripts/moon.gd"))
 			
 		var orbiting_planet_sprite = Sprite2D.new()
 		orbiting_planet_sprite.set_texture(load(orbiting_planet.sprite_path))
