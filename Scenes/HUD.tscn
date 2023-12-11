@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://gxxh4g26ko7h"]
+[gd_scene load_steps=45 format=3 uid="uid://gxxh4g26ko7h"]
 
 [ext_resource type="Script" path="res://Scripts/cat-cam.gd" id="1_36dhd"]
 [ext_resource type="Texture2D" uid="uid://cymqn1qqxd7lp" path="res://Art/HUD/hud-overlay.png" id="1_iel0u"]
@@ -39,8 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://baqmool7ijt8u" path="res://Art/HUD/pngkey.com-scanlines-png-994881.png" id="35_cwaao"]
 [ext_resource type="Texture2D" uid="uid://b1q7pqmn5t2fi" path="res://Art/HUD/restart_button.png" id="35_ejni8"]
 [ext_resource type="Script" path="res://Scripts/timer.gd" id="36_7k8q7"]
-[ext_resource type="Texture2D" uid="uid://r86k0w37fsm4" path="res://Art/HUD/menu_button.png" id="37_si1yj"]
-[ext_resource type="Texture2D" uid="uid://dbe58iub5wn80" path="res://Art/HUD/quit_button.png" id="38_lfiye"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bct6u"]
 animations = [{
@@ -268,23 +266,24 @@ text = "PAUSED"
 label_settings = SubResource("LabelSettings_jicga")
 uppercase = true
 
-[node name="MainMenuButton" type="TextureButton" parent="CanvasLayer/PauseHUD"]
-offset_left = 256.0
-offset_top = 168.0
-offset_right = 592.0
-offset_bottom = 376.0
+[node name="MainMenuButton" type="Button" parent="CanvasLayer/PauseHUD"]
+offset_left = 385.0
+offset_top = 259.0
+offset_right = 490.0
+offset_bottom = 309.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("37_si1yj")
+text = "Main Menu"
 
-[node name="ExitGameButton" type="TextureButton" parent="CanvasLayer/PauseHUD"]
-offset_left = 256.0
-offset_top = 286.0
-offset_right = 592.0
-offset_bottom = 494.0
+[node name="ExitGameButton" type="Button" parent="CanvasLayer/PauseHUD"]
+offset_left = 385.0
+offset_top = 324.0
+offset_right = 490.0
+offset_bottom = 374.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("38_lfiye")
+text = "Exit Game
+"
 
 [node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/PauseHUD"]
 position = Vector2(0, 1)

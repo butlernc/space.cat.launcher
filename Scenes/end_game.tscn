@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy4rdlxno3ecl"]
+[gd_scene load_steps=7 format=3 uid="uid://dy4rdlxno3ecl"]
 
 [ext_resource type="Script" path="res://Scenes/end_game.gd" id="1_byfow"]
 [ext_resource type="Texture2D" uid="uid://d3p7lmkueavxi" path="res://Art/HUD/end_game_screen.png" id="2_grady"]
 [ext_resource type="Texture2D" uid="uid://r86k0w37fsm4" path="res://Art/HUD/menu_button.png" id="3_b0fn0"]
 [ext_resource type="Texture2D" uid="uid://dbe58iub5wn80" path="res://Art/HUD/quit_button.png" id="4_d8cv5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajwt5"]
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h5ujk"]
+font_size = 26
+font_color = Color(0, 0, 0, 1)
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_byfow")
@@ -21,17 +29,21 @@ offset_bottom = 40.0
 
 [node name="ShotsTaken" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 328.0
-offset_top = -55.0
-offset_right = 368.0
-offset_bottom = -32.0
+offset_left = 316.0
+offset_top = -63.0
+offset_right = 406.0
+offset_bottom = -24.0
+text = "100000"
+label_settings = SubResource("LabelSettings_ajwt5")
 
 [node name="Tacos" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 286.0
-offset_top = -111.0
-offset_right = 326.0
-offset_bottom = -88.0
+offset_left = 276.0
+offset_top = -119.0
+offset_right = 366.0
+offset_bottom = -80.0
+text = "100000"
+label_settings = SubResource("LabelSettings_h5ujk")
 
 [node name="MainMenuButton" type="TextureButton" parent="Control"]
 layout_mode = 0

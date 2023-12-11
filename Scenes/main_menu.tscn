@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://cg0nu75w13bcw"]
+[gd_scene load_steps=14 format=3 uid="uid://cg0nu75w13bcw"]
 
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="1_himy0"]
 [ext_resource type="Texture2D" uid="uid://ccc8uxwb46l6u" path="res://Art/Planets/big_planets16.png" id="2_vmsd8"]
-[ext_resource type="Texture2D" uid="uid://qajaao131ahe" path="res://Art/Planets/big_planets6.png" id="3_up1rx"]
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="4_kf52c"]
+[ext_resource type="Texture2D" uid="uid://yrxcw6ek6v3y" path="res://Art/Planets/small_planets9.png" id="4_rbpm5"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="5_axxuj"]
 [ext_resource type="Texture2D" uid="uid://ch3ux6vvlgjq1" path="res://Art/HUD/launch_button.png" id="6_8x0oy"]
+[ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="6_h1gai"]
 [ext_resource type="Script" path="res://Scripts/audio_controller.gd" id="7_6fdy5"]
 [ext_resource type="Texture2D" uid="uid://d3qvtv0ya5l2m" path="res://Art/HUD/title-screen.png" id="9_q87xi"]
 [ext_resource type="AudioStream" uid="uid://dddd4woub1k5c" path="res://Audio/Music/intro_charlie.wav" id="9_thige"]
@@ -47,7 +48,7 @@ _data = {
 "fade": SubResource("Animation_obvnb")
 }
 
-[node name="Scene" type="Node"]
+[node name="Scene2" type="Node"]
 script = ExtResource("5_axxuj")
 
 [node name="BG2" parent="." instance=ExtResource("1_himy0")]
@@ -58,16 +59,28 @@ position = Vector2(480, 270)
 [node name="Planets" type="Node" parent="."]
 
 [node name="Planet2" type="Sprite2D" parent="Planets"]
-position = Vector2(756, 236)
+position = Vector2(815, 323)
 texture = ExtResource("2_vmsd8")
 
 [node name="Planet3" type="Sprite2D" parent="Planets"]
-position = Vector2(179, 159)
-texture = ExtResource("3_up1rx")
+position = Vector2(89, 68)
+texture = ExtResource("4_rbpm5")
 
 [node name="Planet1" type="Sprite2D" parent="Planets"]
 position = Vector2(261, 431)
 texture = ExtResource("4_kf52c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets"]
+position = Vector2(548, 458)
+texture = ExtResource("6_h1gai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Planets"]
+position = Vector2(692, 240)
+texture = ExtResource("6_h1gai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Planets"]
+position = Vector2(96, 435)
+texture = ExtResource("6_h1gai")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 960.0
