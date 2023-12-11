@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dddd4woub1k5c"
-path="res://.godot/imported/intro_charlie.wav-64abd2fb245b8b3a2b8aec1bed00cdfc.sample"
+path="res://.godot/imported/intro_charlie.wav-5dde97a016087ce76300a0faa7f2e64f.sample"
 
 [deps]
 
-source_file="res://Audio/intro_charlie.wav"
-dest_files=["res://.godot/imported/intro_charlie.wav-64abd2fb245b8b3a2b8aec1bed00cdfc.sample"]
+source_file="res://Audio/Music/intro_charlie.wav"
+dest_files=["res://.godot/imported/intro_charlie.wav-5dde97a016087ce76300a0faa7f2e64f.sample"]
 
 [params]
 

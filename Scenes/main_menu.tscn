@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="4_kf52c"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="5_axxuj"]
 [ext_resource type="Texture2D" uid="uid://ch3ux6vvlgjq1" path="res://Art/HUD/launch_button.png" id="6_8x0oy"]
-[ext_resource type="AudioStream" uid="uid://dddd4woub1k5c" path="res://Audio/intro_charlie.wav" id="7_4hmru"]
 [ext_resource type="Script" path="res://Scripts/audio_controller.gd" id="7_6fdy5"]
 [ext_resource type="Texture2D" uid="uid://d3qvtv0ya5l2m" path="res://Art/HUD/title-screen.png" id="9_q87xi"]
+[ext_resource type="AudioStream" uid="uid://dddd4woub1k5c" path="res://Audio/Music/intro_charlie.wav" id="9_thige"]
 
 [sub_resource type="Animation" id="Animation_vjies"]
 length = 0.001
@@ -95,7 +95,7 @@ texture_normal = ExtResource("6_8x0oy")
 script = ExtResource("7_6fdy5")
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="Music"]
-stream = ExtResource("7_4hmru")
+stream = ExtResource("9_thige")
 volume_db = -80.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Music"]
