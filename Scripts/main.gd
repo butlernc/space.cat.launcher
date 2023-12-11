@@ -33,10 +33,12 @@ func new_game():
 	
 func _on_taco_collected():
 	Globals.score += 1
+	get_node("Player/TacoPickup").play()
 	get_node("HUD/CanvasLayer/Score").text = str(Globals.score)
 	
 func _on_cat_launched():
 	Globals.shots_taken += 1
+	get_node("Player/Launch").play()
 	get_node("HUD/CanvasLayer/ShotsTaken").text = str(Globals.shots_taken)
 	
 	

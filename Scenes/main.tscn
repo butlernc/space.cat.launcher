@@ -248,6 +248,7 @@ texture = ExtResource("14_30eho")
 [connection signal="player_aiming" from="AimLines" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_aim_lines_player_aiming"]
 [connection signal="body_entered" from="Taco/Taco 1" to="Taco/Taco 1" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 1" to="." method="_on_taco_collected"]
+[connection signal="taco_collected" from="Taco/Taco 1" to="Player" method="_on_taco_1_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 2" to="Taco/Taco 2" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 2" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 3" to="Taco/Taco 3" method="_on_body_entered"]
