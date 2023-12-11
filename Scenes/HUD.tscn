@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b16bsfc4ev1cd" path="res://Art/HUD/hud_light_blink2.png" id="3_gk3y4"]
 [ext_resource type="Texture2D" uid="uid://i2thmta3if5v" path="res://Art/Cat/cat-cam/landed/portraits-landed2.png" id="3_v1utr"]
 [ext_resource type="Texture2D" uid="uid://b7ou233sqmmph" path="res://Art/Cat/cat-cam/landed/portraits-landed3.png" id="4_axpvs"]
-[ext_resource type="Script" path="res://Scenes/Light.gd" id="4_pipsi"]
+[ext_resource type="Script" path="res://Scripts/Light.gd" id="4_pipsi"]
 [ext_resource type="Texture2D" uid="uid://do00h2ragcmal" path="res://Art/Cat/cat-cam/landed/portraits-landed4.png" id="5_j4atj"]
 [ext_resource type="Texture2D" uid="uid://bf8cvcsb4tt6o" path="res://Art/Cat/cat-cam/landed/portraits-landed5.png" id="6_60okl"]
 [ext_resource type="Texture2D" uid="uid://i0lrhnjim0s0" path="res://Art/Cat/cat-cam/landed/portraits-landed6.png" id="7_xoexp"]

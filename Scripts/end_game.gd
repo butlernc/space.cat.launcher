@@ -13,8 +13,10 @@ func _process(delta):
 
 
 func _on_exit_game_button_pressed():
+	Sfx.cancel()
 	Globals.exit_game()
 
 
 func _on_main_menu_button_pressed():
+	Sfx.confirm()
 	Globals.change_to_main_scene()

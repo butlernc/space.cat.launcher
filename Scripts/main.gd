@@ -19,6 +19,7 @@ func _process(_delta):
 			pause()
 			
 	if(Globals.score == Globals.TACO_COUNT):
+		Sfx.end_game()
 		Globals.change_to_end_scene()
 		
 
@@ -33,12 +34,12 @@ func new_game():
 	
 func _on_taco_collected():
 	Globals.score += 1
-	get_node("Player/TacoPickup").play()
+	Sfx.taco_pickup()
 	get_node("HUD/CanvasLayer/Score").text = str(Globals.score)
 	
 func _on_cat_launched():
 	Globals.shots_taken += 1
-	get_node("Player/Launch").play()
+	Sfx.launch()
 	get_node("HUD/CanvasLayer/ShotsTaken").text = str(Globals.shots_taken)
 	
 	
@@ -62,9 +63,11 @@ func resume():
 	
 func _on_main_menu_button_pressed():
 	resume()
+	Sfx.confirm()
 	Globals.change_to_menu_scene()
 	
 func _on_exit_game_button_pressed():
+	Sfx.cancel()
 	Globals.exit_game()
 		
 	

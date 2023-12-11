@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cg0nu75w13bcw"]
+[gd_scene load_steps=16 format=3 uid="uid://cg0nu75w13bcw"]
 
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="1_himy0"]
 [ext_resource type="Texture2D" uid="uid://ccc8uxwb46l6u" path="res://Art/Planets/big_planets16.png" id="2_vmsd8"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" path="res://Scripts/audio_controller.gd" id="7_6fdy5"]
 [ext_resource type="Texture2D" uid="uid://d3qvtv0ya5l2m" path="res://Art/HUD/title-screen.png" id="9_q87xi"]
 [ext_resource type="AudioStream" uid="uid://dddd4woub1k5c" path="res://Audio/Music/intro_charlie.wav" id="9_thige"]
+[ext_resource type="AudioStream" uid="uid://cjaavdls5t7iu" path="res://Audio/SFX/UI/confirm.wav" id="11_kk6f4"]
+[ext_resource type="AudioStream" uid="uid://b3dxndmwma5tc" path="res://Audio/SFX/UI/cancel.wav" id="12_v8inc"]
 
 [sub_resource type="Animation" id="Animation_vjies"]
 length = 0.001
@@ -116,5 +118,13 @@ root_node = NodePath("../MusicPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_2boo8")
 }
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Confirm" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("11_kk6f4")
+
+[node name="Cancel" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("12_v8inc")
 
 [connection signal="pressed" from="Control/StartButton" to="." method="_on_start_button_pressed"]

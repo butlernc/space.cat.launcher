@@ -3,9 +3,6 @@ signal cat_launched
 signal cat_landed
 
 @onready var _animated_sprite = $AnimatedSprite2D
-@onready var sfx_launch = $Launch
-@onready var sfx_landed = $Landed
-@onready var sfx_taco_pickup = $TacoPickup
 
 var type = Globals.BODY_TYPE_CAT
 #var force = 400
@@ -44,6 +41,7 @@ func reset_launcher():
 
 func reset():
 	reset_launcher()
+	Sfx.reset()
 	landed = true
 	landed_notified = true
 	is_aiming = false
@@ -119,7 +117,7 @@ func _on_body_entered(body):
 				# prime_reset starts the process of waiting for the cat to stop moving, if the cat doesn't stop moving
 				# after 7 seconds we stop trying to reset the launcher because they probably bounced off a planet.
 				prime_reset = true
-				sfx_landed.play()
+				Sfx.land()
 
 
 

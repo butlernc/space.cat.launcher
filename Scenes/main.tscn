@@ -14,8 +14,8 @@
 [ext_resource type="Script" path="res://Scripts/moon.gd" id="11_4qhwm"]
 [ext_resource type="PackedScene" uid="uid://cgq1ad5qym4ae" path="res://Scenes/planet.tscn" id="13_gqxa8"]
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
-[ext_resource type="Script" path="res://Scenes/taco.gd" id="14_74kv6"]
-[ext_resource type="Script" path="res://Scenes/main_camera.gd" id="16_akyki"]
+[ext_resource type="Script" path="res://Scripts/taco.gd" id="14_74kv6"]
+[ext_resource type="Script" path="res://Scripts/main_camera.gd" id="16_akyki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uxhv"]
 radius = 12.0

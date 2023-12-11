@@ -23,6 +23,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
 #	var local_mouse_pos = get_local_mouse_position()
 #	if local_mouse_pos.x < deadzone:
 #		targetSpeed = -maxSpeed
