@@ -73,15 +73,17 @@ position = Vector2(261, 431)
 texture = ExtResource("4_kf52c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Planets"]
-position = Vector2(548, 458)
+position = Vector2(557, 471)
 texture = ExtResource("6_h1gai")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Planets"]
-position = Vector2(692, 240)
+position = Vector2(723, 240)
+rotation = -4.89914
 texture = ExtResource("6_h1gai")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Planets"]
-position = Vector2(96, 435)
+position = Vector2(102, 425)
+rotation = -4.98466
 texture = ExtResource("6_h1gai")
 
 [node name="TextureRect" type="TextureRect" parent="."]

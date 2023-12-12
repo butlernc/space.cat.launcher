@@ -21,3 +21,6 @@ func taco_pickup():
 
 func end_game():
 	$EndGame.play()
+
+func main_bgm():
+	$BGM.play()

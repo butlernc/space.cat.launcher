@@ -8,6 +8,7 @@ var PlanetConfig = load("res://Scripts/PlanetConfig.gd")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Sfx.main_bgm()
 	new_game()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

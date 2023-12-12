@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://blydp546aenyd"]
+[gd_scene load_steps=26 format=3 uid="uid://blydp546aenyd"]
 
 [ext_resource type="Script" path="res://Scenes/sfx.gd" id="1_g2co1"]
 [ext_resource type="AudioStream" uid="uid://cjaavdls5t7iu" path="res://Audio/SFX/UI/confirm.wav" id="1_jtmig"]
@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://b4oymckvjfg1w" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-004.wav" id="16_cswav"]
 [ext_resource type="AudioStream" uid="uid://dndh8magt8pep" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-005.wav" id="17_2f1yf"]
 [ext_resource type="AudioStream" uid="uid://bkwk5a6cs3gsb" path="res://Audio/SFX/UI/game_over_voiceover.wav" id="18_yh7il"]
+[ext_resource type="AudioStream" uid="uid://bayvj1yaltsk6" path="res://Audio/Music/space-chillout-by-penguinmusic.mp3" id="22_e0yvu"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7q5uc"]
 streams_count = 7
@@ -86,3 +87,7 @@ stream = SubResource("AudioStreamRandomizer_cgsqt")
 
 [node name="EndGame" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_yh7il")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_e0yvu")
+volume_db = -10.0

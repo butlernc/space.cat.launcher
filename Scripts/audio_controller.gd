@@ -10,4 +10,3 @@ func fade_in():
 	music.play()
 	fader.play("fade")
 	
-	
