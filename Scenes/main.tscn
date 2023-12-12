@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d3wvr5qww27hg"]
+[gd_scene load_steps=38 format=3 uid="uid://d3wvr5qww27hg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_wjwf8"]
 [ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_gah3j"]
@@ -12,22 +12,37 @@
 [ext_resource type="Script" path="res://Scripts/aim-lines.gd" id="10_lew55"]
 [ext_resource type="Texture2D" uid="uid://cve6crqlern38" path="res://Art/Planets/big_planets14.png" id="11_1rfa5"]
 [ext_resource type="Script" path="res://Scripts/moon.gd" id="11_4qhwm"]
-[ext_resource type="PackedScene" uid="uid://cgq1ad5qym4ae" path="res://Scenes/planet.tscn" id="13_gqxa8"]
+[ext_resource type="Texture2D" uid="uid://bdbc57t3ybyms" path="res://Art/Planets/big_planets2.png" id="12_253ll"]
+[ext_resource type="Texture2D" uid="uid://c6ihkr33oo23k" path="res://Art/Planets/big_planets3.png" id="13_7tgrn"]
 [ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="14_30eho"]
 [ext_resource type="Script" path="res://Scripts/taco.gd" id="14_74kv6"]
+[ext_resource type="Texture2D" uid="uid://qajaao131ahe" path="res://Art/Planets/big_planets6.png" id="14_l7t4j"]
+[ext_resource type="Texture2D" uid="uid://dt3btvevspftg" path="res://Art/Planets/big_planets5.png" id="14_xaw1v"]
+[ext_resource type="Texture2D" uid="uid://cpi8sfspixn6p" path="res://Art/Planets/big_planets10.png" id="15_jp8wl"]
+[ext_resource type="Texture2D" uid="uid://dgh2yljjo0and" path="res://Art/Planets/big_planets8.png" id="16_2gab5"]
 [ext_resource type="Script" path="res://Scripts/main_camera.gd" id="16_akyki"]
+[ext_resource type="Texture2D" uid="uid://dklddvfcu8yqq" path="res://Art/Planets/big_planets17.png" id="17_s581n"]
+[ext_resource type="Texture2D" uid="uid://bgg6wltno8ta0" path="res://Art/Planets/big_planets4.png" id="18_2t8ex"]
+[ext_resource type="Texture2D" uid="uid://d0skl6uwx63yk" path="res://Art/Planets/big_planets9.png" id="19_apev5"]
+[ext_resource type="Texture2D" uid="uid://l47mp8goaows" path="res://Art/Planets/big_planets11.png" id="19_pipvi"]
+[ext_resource type="Texture2D" uid="uid://hbay4pmjwwcm" path="res://Art/Planets/big_planets12.png" id="21_id8po"]
+[ext_resource type="Texture2D" uid="uid://dwq0ko2duabi1" path="res://Art/Planets/big_planets13.png" id="22_d7wre"]
+[ext_resource type="Texture2D" uid="uid://bkjjfjirjp7mf" path="res://Art/Planets/big_planets15.png" id="24_q58tp"]
+[ext_resource type="Texture2D" uid="uid://ccc8uxwb46l6u" path="res://Art/Planets/big_planets16.png" id="25_mujp7"]
+[ext_resource type="Texture2D" uid="uid://dt7xf48tsom0p" path="res://Art/Planets/big_planets18.png" id="27_ibi76"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uxhv"]
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_awq6l"]
-radius = 250.0
+resource_local_to_scene = true
+radius = 300.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8kgv"]
 radius = 80.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kvn7h"]
-radius = 250.0
+radius = 300.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fgbvn"]
 radius = 80.0
@@ -47,9 +62,23 @@ script = ExtResource("1_wjwf8")
 [node name="HUD" parent="." instance=ExtResource("4_7knsj")]
 process_mode = 1
 
-[node name="Reset" parent="HUD/CanvasLayer" index="1"]
-offset_top = 470.0
-offset_bottom = 536.0
+[node name="TimerDisplay" parent="HUD/CanvasLayer/Timer" index="0"]
+offset_left = 780.0
+offset_top = 493.0
+offset_right = 820.0
+offset_bottom = 516.0
+
+[node name="Score" parent="HUD/CanvasLayer" index="3"]
+offset_left = 634.0
+offset_top = 493.0
+offset_right = 674.0
+offset_bottom = 519.0
+
+[node name="ShotsTaken" parent="HUD/CanvasLayer" index="4"]
+offset_left = 705.0
+offset_top = 493.0
+offset_right = 745.0
+offset_bottom = 519.0
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(-155, 9)
@@ -130,10 +159,10 @@ shape = SubResource("CircleShape2D_d8kgv")
 [node name="Sprite" type="Sprite2D" parent="Planets/Large/StartPlanet"]
 texture = ExtResource("9_mi3x8")
 
-[node name="PlanetA" type="Node2D" parent="Planets/Large"]
-position = Vector2(1084, 341)
+[node name="Planet1" type="Node2D" parent="Planets/Large"]
+position = Vector2(342, -221)
 
-[node name="GravityArea" type="Area2D" parent="Planets/Large/PlanetA"]
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet1"]
 collision_layer = 2
 collision_mask = 2
 gravity_space_override = 1
@@ -143,23 +172,23 @@ gravity_point_center = Vector2(0, 0)
 gravity_direction = Vector2(0, 0)
 script = ExtResource("10_0u8vn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetA/GravityArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet1/GravityArea"]
 shape = SubResource("CircleShape2D_awq6l")
 
-[node name="PlanetABody" type="RigidBody2D" parent="Planets/Large/PlanetA"]
+[node name="PlanetABody" type="RigidBody2D" parent="Planets/Large/Planet1"]
 freeze = true
 script = ExtResource("8_ofrto")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetA/PlanetABody"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet1/PlanetABody"]
 shape = SubResource("CircleShape2D_d8kgv")
 
-[node name="Sprite" type="Sprite2D" parent="Planets/Large/PlanetA"]
-texture = ExtResource("11_1rfa5")
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet1"]
+texture = ExtResource("12_253ll")
 
-[node name="PlanetB" type="Node2D" parent="Planets/Large"]
-position = Vector2(911, 7)
+[node name="Planet2" type="Node2D" parent="Planets/Large"]
+position = Vector2(745, -690)
 
-[node name="GravityArea" type="Area2D" parent="Planets/Large/PlanetB"]
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet2"]
 collision_layer = 2
 collision_mask = 2
 gravity_space_override = 1
@@ -169,20 +198,429 @@ gravity_point_center = Vector2(0, 0)
 gravity_direction = Vector2(0, 0)
 script = ExtResource("10_0u8vn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetB/GravityArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet2/GravityArea"]
 shape = SubResource("CircleShape2D_kvn7h")
 
-[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/PlanetB"]
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet2"]
+freeze = true
+script = ExtResource("8_ofrto")
+has_asteroid_belt = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet2/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet2"]
+texture = ExtResource("13_7tgrn")
+
+[node name="Small1" type="Node2D" parent="Planets/Large/Planet2"]
+position = Vector2(109, -91)
+script = ExtResource("11_4qhwm")
+
+[node name="Small1RigidBody" type="RigidBody2D" parent="Planets/Large/Planet2/Small1"]
+collision_layer = 2
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet2/Small1/Small1RigidBody"]
+shape = SubResource("CircleShape2D_3uxhv")
+
+[node name="Texture" type="Sprite2D" parent="Planets/Large/Planet2/Small1"]
+position = Vector2(-0.419998, 0)
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("6_cxciw")
+
+[node name="Planet3" type="Node2D" parent="Planets/Large"]
+position = Vector2(1591, -1287)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet3"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet3/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet3"]
 freeze = true
 script = ExtResource("8_ofrto")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/PlanetB/PlanetBBody"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet3/PlanetBBody"]
 shape = SubResource("CircleShape2D_fgbvn")
 
-[node name="Sprite" type="Sprite2D" parent="Planets/Large/PlanetB"]
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet3"]
+texture = ExtResource("14_xaw1v")
+
+[node name="Planet4" type="Node2D" parent="Planets/Large"]
+position = Vector2(1829, -946)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet4"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet4/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet4"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet4/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet4"]
+texture = ExtResource("15_jp8wl")
+
+[node name="Planet5" type="Node2D" parent="Planets/Large"]
+position = Vector2(-2175, -982)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet5"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet5/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet5"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet5/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet5"]
+texture = ExtResource("14_l7t4j")
+
+[node name="Planet6" type="Node2D" parent="Planets/Large"]
+position = Vector2(-526, -363)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet6"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet6/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet6"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet6/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet6"]
 texture = ExtResource("8_t1reh")
 
-[node name="PlanetC" parent="Planets/Large" instance=ExtResource("13_gqxa8")]
+[node name="Planet7" type="Node2D" parent="Planets/Large"]
+position = Vector2(-1343, -759)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet7"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet7/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet7"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet7/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet7"]
+texture = ExtResource("16_2gab5")
+
+[node name="Planet8" type="Node2D" parent="Planets/Large"]
+position = Vector2(-1595, -50)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet8"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet8/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet8"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet8/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet8"]
+texture = ExtResource("19_apev5")
+
+[node name="Planet9" type="Node2D" parent="Planets/Large"]
+position = Vector2(-1827, 1304)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet9"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet9/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet9"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet9/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet9"]
+texture = ExtResource("19_pipvi")
+
+[node name="Planet10" type="Node2D" parent="Planets/Large"]
+position = Vector2(-600, 917)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet10"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet10/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet10"]
+freeze = true
+script = ExtResource("8_ofrto")
+has_asteroid_belt = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet10/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet10"]
+texture = ExtResource("21_id8po")
+
+[node name="Planet11" type="Node2D" parent="Planets/Large"]
+position = Vector2(855, 1325)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet11"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet11/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet11"]
+freeze = true
+script = ExtResource("8_ofrto")
+has_asteroid_belt = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet11/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet11"]
+texture = ExtResource("22_d7wre")
+
+[node name="Planet12" type="Node2D" parent="Planets/Large"]
+position = Vector2(1715, 702)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet12"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet12/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet12"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet12/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet12"]
+texture = ExtResource("11_1rfa5")
+
+[node name="Planet13" type="Node2D" parent="Planets/Large"]
+position = Vector2(1348, -607)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet13"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet13/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet13"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet13/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet13"]
+texture = ExtResource("24_q58tp")
+
+[node name="Planet14" type="Node2D" parent="Planets/Large"]
+position = Vector2(138, -1397)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet14"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet14/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet14"]
+freeze = true
+script = ExtResource("8_ofrto")
+has_asteroid_belt = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet14/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet14"]
+texture = ExtResource("25_mujp7")
+
+[node name="Planet15" type="Node2D" parent="Planets/Large"]
+position = Vector2(-1041, -1602)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet15"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet15/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet15"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet15/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet15"]
+texture = ExtResource("17_s581n")
+
+[node name="Planet16" type="Node2D" parent="Planets/Large"]
+position = Vector2(-693, -1753)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet16"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet16/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet16"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet16/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet16"]
+texture = ExtResource("27_ibi76")
+
+[node name="Planet17" type="Node2D" parent="Planets/Large"]
+position = Vector2(-992, -2048)
+
+[node name="GravityArea" type="Area2D" parent="Planets/Large/Planet17"]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 80.0
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+script = ExtResource("10_0u8vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet17/GravityArea"]
+shape = SubResource("CircleShape2D_kvn7h")
+
+[node name="PlanetBBody" type="RigidBody2D" parent="Planets/Large/Planet17"]
+freeze = true
+script = ExtResource("8_ofrto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Large/Planet17/PlanetBBody"]
+shape = SubResource("CircleShape2D_fgbvn")
+
+[node name="Sprite" type="Sprite2D" parent="Planets/Large/Planet17"]
+texture = ExtResource("18_2t8ex")
 
 [node name="Medium" type="Node" parent="Planets"]
 
@@ -194,6 +632,7 @@ texture = ExtResource("8_t1reh")
 process_mode = 1
 
 [node name="Taco 1" type="Area2D" parent="Taco"]
+position = Vector2(-29, -31)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("14_74kv6")
@@ -206,39 +645,11 @@ position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
-[node name="Taco 2" type="Area2D" parent="Taco"]
-position = Vector2(710, 335)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("14_74kv6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2"]
-shape = SubResource("RectangleShape2D_6cjwf")
-
-[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2"]
-position = Vector2(4.76837e-07, -4.76837e-07)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("14_30eho")
-
-[node name="Taco 3" type="Area2D" parent="Taco"]
-position = Vector2(434, -137)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("14_74kv6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 3"]
-shape = SubResource("RectangleShape2D_6cjwf")
-
-[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 3"]
-position = Vector2(4.76837e-07, -4.76837e-07)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("14_30eho")
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-22, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(440, 505)
+position = Vector2(659, 498)
 shape = SubResource("RectangleShape2D_ux7ut")
 
 [connection signal="start" from="." to="HUD/CanvasLayer/TextureRect/Light" method="_on_scene_start"]
@@ -255,11 +666,6 @@ shape = SubResource("RectangleShape2D_ux7ut")
 [connection signal="player_aiming" from="AimLines" to="HUD/CanvasLayer/TextureRect/AnimatedSprite2D" method="_on_aim_lines_player_aiming"]
 [connection signal="body_entered" from="Taco/Taco 1" to="Taco/Taco 1" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 1" to="." method="_on_taco_collected"]
-[connection signal="taco_collected" from="Taco/Taco 1" to="Player" method="_on_taco_1_taco_collected"]
-[connection signal="body_entered" from="Taco/Taco 2" to="Taco/Taco 2" method="_on_body_entered"]
-[connection signal="taco_collected" from="Taco/Taco 2" to="." method="_on_taco_collected"]
-[connection signal="body_entered" from="Taco/Taco 3" to="Taco/Taco 3" method="_on_body_entered"]
-[connection signal="taco_collected" from="Taco/Taco 3" to="." method="_on_taco_collected"]
 
 [editable path="HUD"]
 [editable path="Player"]
