@@ -1,70 +1,57 @@
 extends Camera2D
 
-enum DIRECTION {
-	RIGHT,
-	LEFT,
-	TOP,
-	BOTTOM
-}
 
-var px_viewport_size = Vector2(960, 540)
-var left_edge = -480
-var right_edge = 480
-var top_edge = 270
-var bottom_edge = -270
+var move_up = false
+var move_down = false
+var move_left = false
+var move_right = false
 
-var maxSpeed: float = 50.0
+var maxSpeed: float = 200.0
 var rampUpTime: float = 1.0
 
 var currentSpeed: Vector2 = Vector2(0.0, 0.0)
 var targetSpeed: Vector2 = Vector2(0.0, 0.0)
-var deadzone_buffer = 20.0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	viewport_size = get_viewport().size
+	pass
+
+func triggered_follow():
 	pass
 
 
-func get_deadzone(direction : DIRECTION):
-	var deadzone
-	match(direction):
-		DIRECTION.RIGHT:
-			deadzone = right_edge - deadzone_buffer
-		DIRECTION.LEFT:
-			deadzone = left_edge + deadzone_buffer
-		DIRECTION.TOP:
-			deadzone = top_edge - deadzone_buffer
-		DIRECTION.BOTTOM:
-			deadzone = bottom_edge + deadzone_buffer
-	return deadzone
-	
-	
-func lock_on():
+func stop_camera():
+	move_up = false
+	move_down = false
+	move_left = false
+	move_right = false
 	var player_position = get_parent().get_node("Player").get_position()
 	targetSpeed.x = 0
 	targetSpeed.y = 0
 	print(player_position)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var local_mouse_pos = get_local_mouse_position()
-	
-	if local_mouse_pos.x <= get_deadzone(DIRECTION.LEFT):
-		targetSpeed.x = -maxSpeed
-	elif local_mouse_pos.x > get_deadzone(DIRECTION.RIGHT):
-		targetSpeed.x = maxSpeed
-	else:
-		lock_on()
+	var mouse_offset = get_viewport().get_mouse_position()
+	#print(mouse_offset)
+	print("player position", get_parent().get_node("Player").position)
+	print("player position to local", to_local(get_parent().get_node("Player").position))
+	#offset = lerp(get_parent().get_node("Player").position, mouse_offset.normalized() * 100, mouse_offset.length() / 1000)
+	position = lerp(position, get_parent().get_node("Player").position + Vector2(50, 0), 0.5)
+	#if(move_left):
+#		targetSpeed.x = -maxSpeed
+#
+#	if(move_right):
+#		targetSpeed.x = maxSpeed
+#
+#	if(move_down):
+#		targetSpeed.y = maxSpeed
+#
+#	if(move_up):
+#		targetSpeed.y = -maxSpeed
 
-	if local_mouse_pos.y < get_deadzone(DIRECTION.BOTTOM):
-		targetSpeed.y = -maxSpeed
-	elif local_mouse_pos.y > get_deadzone(DIRECTION.TOP):
-		targetSpeed.y = maxSpeed
-	else:
-		targetSpeed.y = 0.0
-
-	currentSpeed = lerp(currentSpeed, targetSpeed, delta / rampUpTime)
-	offset.x += currentSpeed.x * delta
-	offset.y += currentSpeed.y * delta
+#	currentSpeed = lerp(currentSpeed, targetSpeed, delta / rampUpTime)
+#	position.x += currentSpeed.x * delta
+#	position.y += currentSpeed.y * delta

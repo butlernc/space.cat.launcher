@@ -69,17 +69,5 @@ func _on_main_menu_button_pressed():
 func _on_exit_game_button_pressed():
 	Sfx.cancel()
 	Globals.exit_game()
-		
-	
-		
-
-
-	
-
-	
-
-	
-
-	
 	
 
