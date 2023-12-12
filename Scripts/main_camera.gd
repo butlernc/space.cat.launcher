@@ -6,5 +6,6 @@ func _process(delta):
 	var player = get_parent().get_node("Player")
 	var mouse_offset = get_local_mouse_position() + Vector2(120, 68)
 	position = player.position
-	offset = lerp(Vector2(), mouse_offset.normalized() * 300, mouse_offset.length() / 1000)
+	var new_offset = lerp(Vector2(), mouse_offset.normalized() * 300, mouse_offset.length() / 1000)
+	offset = lerp(offset, new_offset, delta / 1.0)
 
