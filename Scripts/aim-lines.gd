@@ -33,11 +33,10 @@ func on_right_click_release():
 	player_aiming_notified = false
 	remove_aim_line()
 
+
 func on_left_click():
 	remove_aim_line()
 	
-func is_creating_last_line(current_length, individual_line_length, max_lines):
-	return (current_length + individual_line_length) > (individual_line_length * (max_lines - 1))
 	
 func refresh_aim_line():
 	remove_aim_line()
@@ -60,9 +59,8 @@ func refresh_aim_line():
 		var line_variability = (index + 10)
 		if(line_variability > individual_line_length):
 			line_variability = individual_line_length
+			
 		var end_point = (start_point + angle * line_variability)
-		
-		
 		create_line(start_point, end_point, index)
 		
 func create_aim_line():

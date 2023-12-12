@@ -39,6 +39,13 @@ size = Vector2(20, 15.5)
 process_mode = 3
 script = ExtResource("1_wjwf8")
 
+[node name="MainCamera" type="Camera2D" parent="."]
+process_mode = 1
+position = Vector2(-155, 13)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("16_akyki")
+
 [node name="BG2" parent="." instance=ExtResource("2_gah3j")]
 
 [node name="HUD" parent="." instance=ExtResource("4_7knsj")]
@@ -65,14 +72,6 @@ freeze_mode = 1
 
 [node name="CollisionShape2D" parent="Player" index="0"]
 position = Vector2(0.5, 0.25)
-
-[node name="MainCamera" type="Camera2D" parent="Player"]
-process_mode = 1
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-script = ExtResource("16_akyki")
 
 [node name="AimLines" type="Node2D" parent="."]
 process_mode = 1
