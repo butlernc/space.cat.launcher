@@ -18,9 +18,16 @@ func land():
 	
 func taco_pickup():
 	$TacoPickup.play()
+	$TacoPickupDing.play()
 
 func end_game():
 	$EndGame.play()
 
 func main_bgm():
 	$BGM.play()
+	
+func reset_sfx():
+	$EndGame.stop()
+
+func stop_bgm():
+	$BGM.stop()

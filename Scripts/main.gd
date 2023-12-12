@@ -27,21 +27,29 @@ func _process(_delta):
 func new_game():
 	$Player.start($StartPosition.position)
 	pause_overlay = get_node("HUD/CanvasLayer/PauseHUD")
+	Globals.score = 0
 	Globals.TACO_COUNT = get_node("./Taco").get_child_count()
 	# generate_planets(load("res://Levels/level_1.tres"))
+	update_taco_hud_display()
 	pause_overlay.hide()
 	start.emit()
+	
+
+func update_taco_hud_display():
+	var format_string = "%s / %s"
+	var actual_string = format_string % [str(Globals.score), str(Globals.TACO_COUNT)]
+	get_node("HUD/CanvasLayer/Score").text = actual_string
 	
 	
 func _on_taco_collected():
 	Globals.score += 1
 	Sfx.taco_pickup()
-	get_node("HUD/CanvasLayer/Score").text = str(Globals.score)
+	update_taco_hud_display()
 	
 func _on_cat_launched():
 	Globals.shots_taken += 1
 	Sfx.launch()
-	get_node("HUD/CanvasLayer/ShotsTaken").text = str(Globals.shots_taken)
+	get_node("HUD/CanvasLayer/ShotsTaken").text = str(Globals.shots_taken) 
 	
 	
 func generate_planets(planet_list):

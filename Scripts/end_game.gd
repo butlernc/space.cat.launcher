@@ -19,4 +19,4 @@ func _on_exit_game_button_pressed():
 
 func _on_main_menu_button_pressed():
 	Sfx.confirm()
-	Globals.change_to_main_scene()
+	Globals.change_to_menu_scene()

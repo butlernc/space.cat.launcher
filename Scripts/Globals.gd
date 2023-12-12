@@ -13,9 +13,12 @@ func change_to_main_scene():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	
 func change_to_menu_scene():
+	Sfx.stop_bgm()
+	Sfx.reset_sfx()
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	
 func change_to_end_scene():
+	Sfx.stop_bgm()
 	get_tree().change_scene_to_file("res://Scenes/end_game.tscn")
 
 func exit_game():
