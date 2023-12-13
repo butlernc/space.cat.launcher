@@ -41,7 +41,7 @@ func reset_launcher():
 
 func reset():
 	reset_launcher()
-	Sfx.reset()
+	$SFX.reset()
 	landed = true
 	landed_notified = true
 	is_aiming = false
@@ -117,9 +117,12 @@ func _on_body_entered(body):
 				# prime_reset starts the process of waiting for the cat to stop moving, if the cat doesn't stop moving
 				# after 7 seconds we stop trying to reset the launcher because they probably bounced off a planet.
 				prime_reset = true
-				Sfx.land()
+				$SFX.land()
 
 
 
 func _on_reset_pressed():
+	reset()
+
+func _on_boundary_body_exited(body):
 	reset()

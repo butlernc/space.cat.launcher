@@ -5,6 +5,7 @@ var type = Globals.BODY_TYPE_TACO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rotate(randf_range(0, 500))
 	pass # Replace with function body.
 
 

@@ -1,69 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://b1kgyuc6aqhd5"]
+[gd_scene load_steps=6 format=3 uid="uid://b1kgyuc6aqhd5"]
 
 [ext_resource type="Script" path="res://Scenes/sfx.gd" id="1_g2co1"]
 [ext_resource type="AudioStream" uid="uid://cjaavdls5t7iu" path="res://Audio/SFX/UI/confirm.wav" id="1_jtmig"]
 [ext_resource type="AudioStream" uid="uid://b3dxndmwma5tc" path="res://Audio/SFX/UI/cancel.wav" id="3_lfq3h"]
-[ext_resource type="AudioStream" uid="uid://bca2a36kxtb2d" path="res://Audio/SFX/UI/reset.wav" id="4_65tm0"]
-[ext_resource type="AudioStream" uid="uid://y6e5o6qrgx3r" path="res://Audio/SFX/Launched/launched-006.wav" id="5_qlv5m"]
-[ext_resource type="AudioStream" uid="uid://cjdckdqv3vgij" path="res://Audio/SFX/Launched/launched-007.wav" id="6_d07cd"]
-[ext_resource type="AudioStream" uid="uid://dsi5roaa4r1cu" path="res://Audio/SFX/Launched/launched-008.wav" id="7_10u5y"]
-[ext_resource type="AudioStream" uid="uid://dg2rn5uffqi61" path="res://Audio/SFX/Launched/launched-009.wav" id="8_gmd1a"]
-[ext_resource type="AudioStream" uid="uid://cwgoaogwwlwno" path="res://Audio/SFX/Landed/landed-001.wav" id="9_j3lx3"]
-[ext_resource type="AudioStream" uid="uid://bnjqiuk0hkvv2" path="res://Audio/SFX/Launched/launched-010.wav" id="9_vr0yq"]
-[ext_resource type="AudioStream" uid="uid://bawvistthw31w" path="res://Audio/SFX/Landed/landed-002.wav" id="10_bx8q5"]
-[ext_resource type="AudioStream" uid="uid://b18025dmc80cw" path="res://Audio/SFX/Launched/launched-005.wav" id="10_hnrgx"]
-[ext_resource type="AudioStream" uid="uid://bc3qpfe3x08q3" path="res://Audio/SFX/Landed/landed-003.wav" id="11_cxtog"]
-[ext_resource type="AudioStream" uid="uid://bhbqnh5q43m71" path="res://Audio/SFX/Launched/launched.wav" id="11_joeuo"]
-[ext_resource type="AudioStream" uid="uid://d2k2kwoltcvpx" path="res://Audio/SFX/Landed/landed-004.wav" id="12_7xbqc"]
-[ext_resource type="AudioStream" uid="uid://ct5q8jcx0d207" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-001.wav" id="13_nnu33"]
-[ext_resource type="AudioStream" uid="uid://dexo8lt4pqxvm" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-002.wav" id="14_v4tr4"]
-[ext_resource type="AudioStream" uid="uid://w5oeliu11u85" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-003.wav" id="15_78oqy"]
-[ext_resource type="AudioStream" uid="uid://b4oymckvjfg1w" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-004.wav" id="16_cswav"]
-[ext_resource type="AudioStream" uid="uid://dndh8magt8pep" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-005.wav" id="17_2f1yf"]
 [ext_resource type="AudioStream" uid="uid://bkwk5a6cs3gsb" path="res://Audio/SFX/UI/game_over_voiceover.wav" id="18_yh7il"]
 [ext_resource type="AudioStream" uid="uid://bayvj1yaltsk6" path="res://Audio/Music/space-chillout-by-penguinmusic.mp3" id="22_e0yvu"]
-[ext_resource type="AudioStream" uid="uid://ciug22sgavrea" path="res://Audio/SFX/TacoPickup/Ding/ding_pickup.wav" id="23_8o3n7"]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7q5uc"]
-streams_count = 7
-stream_0/stream = ExtResource("5_qlv5m")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("6_d07cd")
-stream_1/weight = 1.0
-stream_2/stream = ExtResource("7_10u5y")
-stream_2/weight = 1.0
-stream_3/stream = ExtResource("8_gmd1a")
-stream_3/weight = 1.0
-stream_4/stream = ExtResource("9_vr0yq")
-stream_4/weight = 1.0
-stream_5/stream = ExtResource("10_hnrgx")
-stream_5/weight = 1.0
-stream_6/stream = ExtResource("11_joeuo")
-stream_6/weight = 1.0
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2h6b0"]
-streams_count = 4
-stream_0/stream = ExtResource("9_j3lx3")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("10_bx8q5")
-stream_1/weight = 1.0
-stream_2/stream = ExtResource("11_cxtog")
-stream_2/weight = 1.0
-stream_3/stream = ExtResource("12_7xbqc")
-stream_3/weight = 1.0
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cgsqt"]
-streams_count = 5
-stream_0/stream = ExtResource("13_nnu33")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("14_v4tr4")
-stream_1/weight = 1.0
-stream_2/stream = ExtResource("15_78oqy")
-stream_2/weight = 1.0
-stream_3/stream = ExtResource("16_cswav")
-stream_3/weight = 1.0
-stream_4/stream = ExtResource("17_2f1yf")
-stream_4/weight = 1.0
 
 [node name="SFX" type="Node"]
 script = ExtResource("1_g2co1")
@@ -74,25 +15,9 @@ stream = ExtResource("1_jtmig")
 [node name="Cancel" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_lfq3h")
 
-[node name="Reset" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_65tm0")
-
-[node name="Launch" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamRandomizer_7q5uc")
-
-[node name="Landed" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamRandomizer_2h6b0")
-
-[node name="TacoPickup" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamRandomizer_cgsqt")
-
 [node name="EndGame" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_yh7il")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_e0yvu")
 volume_db = -10.0
-
-[node name="TacoPickupDing" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("23_8o3n7")
-volume_db = -11.605

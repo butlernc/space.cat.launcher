@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://fiu7pvwfesxw"]
+[gd_scene load_steps=9 format=3 uid="uid://fiu7pvwfesxw"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cxcwf"]
 [ext_resource type="Texture2D" uid="uid://r2i3fljn1v5a" path="res://Art/Cat/on-planet/cat_planet-1.png" id="2_h63jd"]
 [ext_resource type="Texture2D" uid="uid://di85bqdlk0poo" path="res://Art/Cat/on-planet/cat_planet-2.png" id="3_kokal"]
 [ext_resource type="Texture2D" uid="uid://c6vp3q6kmnjbb" path="res://Art/Cat/on-planet/cat_planet-3.png" id="4_incdx"]
 [ext_resource type="Texture2D" uid="uid://2ae4nl3sislj" path="res://Art/Cat/on-planet/cat_planet-4.png" id="5_4nlu7"]
+[ext_resource type="PackedScene" uid="uid://c1aye7egbikod" path="res://Scenes/player_sfx.tscn" id="6_bmxkj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vi23v"]
 size = Vector2(27, 24)
@@ -50,3 +51,5 @@ shape = SubResource("RectangleShape2D_vi23v")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7opx7")
 animation = &"landed"
+
+[node name="SFX" parent="." instance=ExtResource("6_bmxkj")]

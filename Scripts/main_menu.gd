@@ -2,9 +2,9 @@ extends Node
 
 @onready var sfx_confirm = $SFX/Confirm
 @onready var sfx_cancel = $SFX/Cancel
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ResourceLoader.load_threaded_request(Globals.BOUNDARY_SCENE_PATH)
 	$Music.fade_in()
 	pass # Replace with function body.
 

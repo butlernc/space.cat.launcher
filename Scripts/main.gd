@@ -11,6 +11,10 @@ func _ready():
 	Sfx.main_bgm()
 	new_game()
 
+
+func _on_ready():
+	setup_boundary()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if(Input.is_action_just_pressed("pause")):
@@ -20,12 +24,20 @@ func _process(_delta):
 			pause()
 			
 	if(Globals.score == Globals.TACO_COUNT):
-		Sfx.end_game()
 		Globals.change_to_end_scene()
-		
+
+
+func setup_boundary():
+	var boundary_scene = ResourceLoader.load_threaded_get(Globals.BOUNDARY_SCENE_PATH)
+	# Instantiate the enemy scene and add it to the current scene
+	var boundary = boundary_scene.instantiate()
+	boundary.body_exited.connect($Player._on_boundary_body_exited)
+	add_child(boundary)
 
 func new_game():
+	
 	$Player.start($StartPosition.position)
+	
 	pause_overlay = get_node("HUD/CanvasLayer/PauseHUD")
 	Globals.score = 0
 	Globals.TACO_COUNT = get_node("./Taco").get_child_count()
@@ -36,19 +48,17 @@ func new_game():
 	
 
 func update_taco_hud_display():
-	var format_string = "%s / %s"
-	var actual_string = format_string % [str(Globals.score), str(Globals.TACO_COUNT)]
-	get_node("HUD/CanvasLayer/Score").text = actual_string
+	get_node("HUD/CanvasLayer/Score").text = str(Globals.score)
 	
 	
 func _on_taco_collected():
 	Globals.score += 1
-	Sfx.taco_pickup()
+	$Player/SFX.taco_pickup()
 	update_taco_hud_display()
 	
 func _on_cat_launched():
 	Globals.shots_taken += 1
-	Sfx.launch()
+	$Player/SFX.launch()
 	get_node("HUD/CanvasLayer/ShotsTaken").text = str(Globals.shots_taken) 
 	
 	
@@ -79,4 +89,3 @@ func _on_exit_game_button_pressed():
 	Sfx.cancel()
 	Globals.exit_game()
 	
-
