@@ -12,6 +12,7 @@ var is_clockwise_orbit = false
 func _ready():
 	var which_way = randi_range(0, 10)
 	is_clockwise_orbit = which_way > 5
+	mean_anomaly = randi_range(0, 500)
 
 func clockwise_orbit(delta): 
 	# "positive orbit"
