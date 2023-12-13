@@ -1,0 +1,84 @@
+[gd_scene load_steps=23 format=3 uid="uid://c1aye7egbikod"]
+
+[ext_resource type="Script" path="res://Scripts/player_sfx.gd" id="1_3fqpq"]
+[ext_resource type="AudioStream" uid="uid://y6e5o6qrgx3r" path="res://Audio/SFX/Launched/launched-006.wav" id="1_xfr6v"]
+[ext_resource type="AudioStream" uid="uid://cjdckdqv3vgij" path="res://Audio/SFX/Launched/launched-007.wav" id="2_by1gl"]
+[ext_resource type="AudioStream" uid="uid://dsi5roaa4r1cu" path="res://Audio/SFX/Launched/launched-008.wav" id="3_vcerh"]
+[ext_resource type="AudioStream" uid="uid://dg2rn5uffqi61" path="res://Audio/SFX/Launched/launched-009.wav" id="4_rhdbr"]
+[ext_resource type="AudioStream" uid="uid://bnjqiuk0hkvv2" path="res://Audio/SFX/Launched/launched-010.wav" id="5_tf70k"]
+[ext_resource type="AudioStream" uid="uid://b18025dmc80cw" path="res://Audio/SFX/Launched/launched-005.wav" id="6_cidjg"]
+[ext_resource type="AudioStream" uid="uid://bhbqnh5q43m71" path="res://Audio/SFX/Launched/launched.wav" id="7_8prbn"]
+[ext_resource type="AudioStream" uid="uid://cwgoaogwwlwno" path="res://Audio/SFX/Landed/landed-001.wav" id="8_wpcuo"]
+[ext_resource type="AudioStream" uid="uid://bawvistthw31w" path="res://Audio/SFX/Landed/landed-002.wav" id="9_kwdc6"]
+[ext_resource type="AudioStream" uid="uid://bc3qpfe3x08q3" path="res://Audio/SFX/Landed/landed-003.wav" id="10_ohaye"]
+[ext_resource type="AudioStream" uid="uid://d2k2kwoltcvpx" path="res://Audio/SFX/Landed/landed-004.wav" id="11_k4ejx"]
+[ext_resource type="AudioStream" uid="uid://ct5q8jcx0d207" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-001.wav" id="12_4oema"]
+[ext_resource type="AudioStream" uid="uid://dexo8lt4pqxvm" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-002.wav" id="13_wb1fw"]
+[ext_resource type="AudioStream" uid="uid://w5oeliu11u85" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-003.wav" id="14_qtueq"]
+[ext_resource type="AudioStream" uid="uid://b4oymckvjfg1w" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-004.wav" id="15_mab8i"]
+[ext_resource type="AudioStream" uid="uid://dndh8magt8pep" path="res://Audio/SFX/TacoPickup/Bite/taco_pickup-005.wav" id="16_vb587"]
+[ext_resource type="AudioStream" uid="uid://ciug22sgavrea" path="res://Audio/SFX/TacoPickup/Ding/ding_pickup.wav" id="17_2ixki"]
+[ext_resource type="AudioStream" uid="uid://bca2a36kxtb2d" path="res://Audio/SFX/UI/reset.wav" id="19_t5wd2"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qspbk"]
+streams_count = 7
+stream_0/stream = ExtResource("1_xfr6v")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_by1gl")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_vcerh")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_rhdbr")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_tf70k")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("6_cidjg")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("7_8prbn")
+stream_6/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tqyoy"]
+streams_count = 4
+stream_0/stream = ExtResource("8_wpcuo")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("9_kwdc6")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("10_ohaye")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("11_k4ejx")
+stream_3/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5bc3u"]
+streams_count = 5
+stream_0/stream = ExtResource("12_4oema")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("13_wb1fw")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("14_qtueq")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("15_mab8i")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("16_vb587")
+stream_4/weight = 1.0
+
+[node name="PlayerSFX" type="Node2D"]
+script = ExtResource("1_3fqpq")
+
+[node name="Launch" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_qspbk")
+volume_db = -1.238
+
+[node name="Landed" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_tqyoy")
+volume_db = -2.476
+
+[node name="TacoPickup" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_5bc3u")
+volume_db = -3.095
+
+[node name="TacoPickupDing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_2ixki")
+volume_db = -15.319
+
+[node name="Reset" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_t5wd2")

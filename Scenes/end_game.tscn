@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://dy4rdlxno3ecl"]
+
+[ext_resource type="Script" path="res://Scripts/end_game.gd" id="1_d6c4v"]
+[ext_resource type="PackedScene" uid="uid://bt7vsfdstvba6" path="res://Scenes/bg.tscn" id="2_cs74i"]
+[ext_resource type="Texture2D" uid="uid://d3p7lmkueavxi" path="res://Art/HUD/end_game_screen.png" id="2_grady"]
+[ext_resource type="Texture2D" uid="uid://r86k0w37fsm4" path="res://Art/HUD/menu_button.png" id="3_b0fn0"]
+[ext_resource type="Texture2D" uid="uid://ccc8uxwb46l6u" path="res://Art/Planets/big_planets16.png" id="3_dkaot"]
+[ext_resource type="Texture2D" uid="uid://dbe58iub5wn80" path="res://Art/HUD/quit_button.png" id="4_d8cv5"]
+[ext_resource type="Texture2D" uid="uid://yrxcw6ek6v3y" path="res://Art/Planets/small_planets9.png" id="4_sjpwv"]
+[ext_resource type="Texture2D" uid="uid://244srst5o6bv" path="res://Art/Planets/big_planets1.png" id="5_21k3u"]
+[ext_resource type="Texture2D" uid="uid://g7drucpfysiy" path="res://Art/Tacos/taco.png" id="6_05tpq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajwt5"]
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h5ujk"]
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="Scene3" type="Node2D"]
+script = ExtResource("1_d6c4v")
+
+[node name="BG2" parent="." instance=ExtResource("2_cs74i")]
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(481, 271)
+texture = ExtResource("2_grady")
+
+[node name="Planets" type="Node" parent="."]
+
+[node name="Planet2" type="Sprite2D" parent="Planets"]
+position = Vector2(85, 244)
+texture = ExtResource("3_dkaot")
+
+[node name="Planet3" type="Sprite2D" parent="Planets"]
+position = Vector2(171, 100)
+texture = ExtResource("4_sjpwv")
+
+[node name="Planet1" type="Sprite2D" parent="Planets"]
+position = Vector2(921, -9)
+texture = ExtResource("5_21k3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets"]
+position = Vector2(41, 37)
+texture = ExtResource("6_05tpq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Planets"]
+position = Vector2(919, 317)
+rotation = -3.79086
+texture = ExtResource("6_05tpq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Planets"]
+position = Vector2(481, 445)
+rotation = 1.06465
+texture = ExtResource("6_05tpq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 482.0
+offset_top = 273.0
+offset_right = 522.0
+offset_bottom = 313.0
+
+[node name="ShotsTaken" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 313.0
+offset_top = -63.0
+offset_right = 403.0
+offset_bottom = -24.0
+text = "10000"
+label_settings = SubResource("LabelSettings_ajwt5")
+
+[node name="Tacos" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = -119.0
+offset_right = 366.0
+offset_bottom = -80.0
+text = "10000"
+label_settings = SubResource("LabelSettings_h5ujk")
+
+[node name="MainMenuButton" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 104.0
+offset_right = 340.0
+offset_bottom = 312.0
+texture_normal = ExtResource("3_b0fn0")
+
+[node name="ExitGameButton" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 106.0
+offset_right = 538.0
+offset_bottom = 314.0
+texture_normal = ExtResource("4_d8cv5")
+
+[connection signal="pressed" from="Control/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Control/ExitGameButton" to="." method="_on_exit_game_button_pressed"]
