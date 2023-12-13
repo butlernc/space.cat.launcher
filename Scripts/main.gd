@@ -22,9 +22,6 @@ func _process(_delta):
 			resume()
 		else:
 			pause()
-			
-	if(Globals.score == Globals.TACO_COUNT):
-		Globals.change_to_end_scene()
 
 
 func setup_boundary():
@@ -40,11 +37,10 @@ func new_game():
 	
 	pause_overlay = get_node("HUD/CanvasLayer/PauseHUD")
 	Globals.score = 0
-	Globals.TACO_COUNT = get_node("./Taco").get_child_count()
-	# generate_planets(load("res://Levels/level_1.tres"))
 	update_taco_hud_display()
 	pause_overlay.hide()
 	start.emit()
+	Globals.timer_finished = false
 	
 
 func update_taco_hud_display():
@@ -70,7 +66,7 @@ func generate_planets(planet_list):
 		
 func _on_timer_finished():
 	Globals.change_to_end_scene()
-		
+	Globals.timer_finished = true
 		
 func pause():
 	get_tree().set_pause(true)
@@ -89,3 +85,6 @@ func _on_exit_game_button_pressed():
 	Sfx.cancel()
 	Globals.exit_game()
 	
+func _on_player_taco_penalty():
+	Globals.score -= 50
+	update_taco_hud_display()

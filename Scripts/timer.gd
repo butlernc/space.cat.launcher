@@ -12,4 +12,4 @@ func _process(delta):
 	label.text = "%d:%02d" % [floor(get_time_left() / 60), int(get_time_left()) % 60]
 	
 func on_game_start():
-	start(120)
+	start(98)

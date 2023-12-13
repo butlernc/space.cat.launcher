@@ -4,7 +4,7 @@ var semi_major_axis
 var eccentricity
 var orbital_speed
 var mean_anomaly
-var base_radius = 3106
+var base_radius = 3200
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

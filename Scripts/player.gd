@@ -1,6 +1,7 @@
 extends RigidBody2D
 signal cat_launched
 signal cat_landed
+signal taco_penalty
 
 @onready var _animated_sprite = $AnimatedSprite2D
 
@@ -46,6 +47,9 @@ func reset():
 	landed_notified = true
 	is_aiming = false
 	reset_rigidbody_state = true
+	taco_penalty.emit()
+	
+	
 	
 func emit_landing():
 	if(!landed_notified):
@@ -125,4 +129,6 @@ func _on_reset_pressed():
 	reset()
 
 func _on_boundary_body_exited(body):
-	reset()
+	if(!Globals.timer_finished):
+		reset()
+	

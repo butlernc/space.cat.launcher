@@ -7,6 +7,7 @@ var BODY_TYPE_CAT = "BODY_TYPE_CAT"
 var TACO_COUNT = 0
 var score = 0
 var shots_taken = 0
+var timer_finished = false
 
 var BOUNDARY_SCENE_PATH = "res://Scenes/boundary.tscn"
 

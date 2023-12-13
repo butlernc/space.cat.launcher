@@ -66,16 +66,19 @@ script = ExtResource("1_3fqpq")
 
 [node name="Launch" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_qspbk")
+volume_db = -1.238
 
 [node name="Landed" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_tqyoy")
+volume_db = -2.476
 
 [node name="TacoPickup" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_5bc3u")
+volume_db = -3.095
 
 [node name="TacoPickupDing" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_2ixki")
-volume_db = -11.605
+volume_db = -15.319
 
 [node name="Reset" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_t5wd2")
