@@ -10,6 +10,7 @@ var is_clockwise_orbit = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("Small1RigidBody").set_freeze_enabled(true)
 	var which_way = randi_range(0, 10)
 	is_clockwise_orbit = which_way > 5
 	mean_anomaly = randi_range(0, 500)
