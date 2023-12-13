@@ -1252,7 +1252,7 @@ texture = ExtResource("42_2nem5")
 process_mode = 1
 
 [node name="Taco 1" type="Area2D" parent="Taco"]
-position = Vector2(72, -204)
+position = Vector2(0, -8)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("14_74kv6")
@@ -2105,18 +2105,6 @@ position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
-[node name="Taco 115" type="Area2D" parent="Taco"]
-position = Vector2(1716, -1206)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("14_74kv6")
-
-[node name="Taco 116" type="Area2D" parent="Taco"]
-position = Vector2(1638, -1185)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("14_74kv6")
-
 [node name="Taco 117" type="Area2D" parent="Taco"]
 position = Vector2(1677, -1263)
 collision_layer = 4
@@ -2242,12 +2230,6 @@ shape = SubResource("RectangleShape2D_6cjwf")
 position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
-
-[node name="Taco 126" type="Area2D" parent="Taco"]
-position = Vector2(1428, -1446)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("14_74kv6")
 
 [node name="Taco 127" type="Area2D" parent="Taco"]
 position = Vector2(1762, -1334)
@@ -14759,6 +14741,244 @@ script = ExtResource("14_74kv6")
 shape = SubResource("RectangleShape2D_6cjwf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2259"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1257" type="Area2D" parent="Taco"]
+position = Vector2(-71, -421)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1257"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1257"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1258" type="Area2D" parent="Taco"]
+position = Vector2(-110, -478)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1258"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1258"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1259" type="Area2D" parent="Taco"]
+position = Vector2(-89, -534)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1259"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1259"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1260" type="Area2D" parent="Taco"]
+position = Vector2(-22, -554)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1260"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1260"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1261" type="Area2D" parent="Taco"]
+position = Vector2(-42, -373)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1261"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1261"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1262" type="Area2D" parent="Taco"]
+position = Vector2(-2, -428)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1262"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1262"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1263" type="Area2D" parent="Taco"]
+position = Vector2(-141, -387)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1263"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1263"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1264" type="Area2D" parent="Taco"]
+position = Vector2(-38, -421)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1264"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1264"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2276" type="Area2D" parent="Taco"]
+position = Vector2(-164, -505)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2276"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2276"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2277" type="Area2D" parent="Taco"]
+position = Vector2(-44, -398)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2277"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2277"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2281" type="Area2D" parent="Taco"]
+position = Vector2(-23, -454)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2281"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2281"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2282" type="Area2D" parent="Taco"]
+position = Vector2(-141, -391)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2282"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2282"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2283" type="Area2D" parent="Taco"]
+position = Vector2(-167, -432)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2283"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2283"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2284" type="Area2D" parent="Taco"]
+position = Vector2(-67, -411)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2284"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2284"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2285" type="Area2D" parent="Taco"]
+position = Vector2(-127, -487)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2285"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2285"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2289" type="Area2D" parent="Taco"]
+position = Vector2(-153, -374)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2289"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2289"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2297" type="Area2D" parent="Taco"]
+position = Vector2(-75, -369)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2297"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2297"]
 position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
@@ -32359,6 +32579,1294 @@ position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_30eho")
 
+[node name="Taco 585" type="Area2D" parent="Taco"]
+position = Vector2(-333, -274)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 585"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 585"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 586" type="Area2D" parent="Taco"]
+position = Vector2(-287, -91)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 586"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 586"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 590" type="Area2D" parent="Taco"]
+position = Vector2(-254, -164)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 590"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 590"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 595" type="Area2D" parent="Taco"]
+position = Vector2(-280, -205)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 595"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 595"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 596" type="Area2D" parent="Taco"]
+position = Vector2(-180, -184)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 596"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 596"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 597" type="Area2D" parent="Taco"]
+position = Vector2(-240, -260)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 597"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 597"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 598" type="Area2D" parent="Taco"]
+position = Vector2(-308, -301)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 598"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 598"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 599" type="Area2D" parent="Taco"]
+position = Vector2(-266, -147)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 599"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 599"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 600" type="Area2D" parent="Taco"]
+position = Vector2(-292, -188)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 600"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 600"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1177" type="Area2D" parent="Taco"]
+position = Vector2(59, -201)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1177"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1177"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1180" type="Area2D" parent="Taco"]
+position = Vector2(99, -256)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1180"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1180"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1181" type="Area2D" parent="Taco"]
+position = Vector2(31, -297)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1181"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1181"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1182" type="Area2D" parent="Taco"]
+position = Vector2(-156, -199)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1182"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1182"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1183" type="Area2D" parent="Taco"]
+position = Vector2(-195, -256)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1183"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1183"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1184" type="Area2D" parent="Taco"]
+position = Vector2(-263, -240)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1184"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1184"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1185" type="Area2D" parent="Taco"]
+position = Vector2(-144, -68)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1185"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1185"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1186" type="Area2D" parent="Taco"]
+position = Vector2(-101, -110)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1186"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1186"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1187" type="Area2D" parent="Taco"]
+position = Vector2(-127, -151)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1187"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1187"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1188" type="Area2D" parent="Taco"]
+position = Vector2(51, -151)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1188"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1188"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1189" type="Area2D" parent="Taco"]
+position = Vector2(-27, -130)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1189"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1189"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1190" type="Area2D" parent="Taco"]
+position = Vector2(12, -208)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1190"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1190"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1191" type="Area2D" parent="Taco"]
+position = Vector2(-87, -206)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1191"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1191"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1192" type="Area2D" parent="Taco"]
+position = Vector2(-208, -52)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1192"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1192"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1193" type="Area2D" parent="Taco"]
+position = Vector2(-247, -109)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1193"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1193"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1194" type="Area2D" parent="Taco"]
+position = Vector2(-226, -165)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1194"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1194"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1195" type="Area2D" parent="Taco"]
+position = Vector2(-123, -199)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1195"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1195"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1255" type="Area2D" parent="Taco"]
+position = Vector2(43, -107)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1255"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1255"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1316" type="Area2D" parent="Taco"]
+position = Vector2(-144, -49)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1316"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1316"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1317" type="Area2D" parent="Taco"]
+position = Vector2(-123, -105)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1317"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1317"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1318" type="Area2D" parent="Taco"]
+position = Vector2(-311, -88)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1318"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1318"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1319" type="Area2D" parent="Taco"]
+position = Vector2(-345, -163)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1319"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1319"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1323" type="Area2D" parent="Taco"]
+position = Vector2(-20, -139)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1323"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1323"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1324" type="Area2D" parent="Taco"]
+position = Vector2(-77, -174)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1324"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1324"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1371" type="Area2D" parent="Taco"]
+position = Vector2(-37, -145)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1371"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1371"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1372" type="Area2D" parent="Taco"]
+position = Vector2(141, -145)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1372"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1372"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1373" type="Area2D" parent="Taco"]
+position = Vector2(102, -202)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1373"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1373"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1374" type="Area2D" parent="Taco"]
+position = Vector2(3, -200)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1374"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1374"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1385" type="Area2D" parent="Taco"]
+position = Vector2(-291, -200)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1385"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1385"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2204" type="Area2D" parent="Taco"]
+position = Vector2(147, -41)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2204"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2204"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2214" type="Area2D" parent="Taco"]
+position = Vector2(113, -116)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2214"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2214"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2215" type="Area2D" parent="Taco"]
+position = Vector2(-58, -56)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2215"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2215"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2219" type="Area2D" parent="Taco"]
+position = Vector2(17, -79)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2219"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2219"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2220" type="Area2D" parent="Taco"]
+position = Vector2(-9, -120)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2220"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2220"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2224" type="Area2D" parent="Taco"]
+position = Vector2(91, -99)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2224"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2224"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2225" type="Area2D" parent="Taco"]
+position = Vector2(5, -62)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2225"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2225"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2237" type="Area2D" parent="Taco"]
+position = Vector2(-21, -103)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2237"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2237"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 601" type="Area2D" parent="Taco"]
+position = Vector2(113, -155)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 601"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 601"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 602" type="Area2D" parent="Taco"]
+position = Vector2(159, 28)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 602"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 602"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 603" type="Area2D" parent="Taco"]
+position = Vector2(192, -45)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 603"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 603"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 604" type="Area2D" parent="Taco"]
+position = Vector2(166, -86)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 604"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 604"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 605" type="Area2D" parent="Taco"]
+position = Vector2(266, -65)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 605"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 605"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 606" type="Area2D" parent="Taco"]
+position = Vector2(206, -141)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 606"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 606"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 607" type="Area2D" parent="Taco"]
+position = Vector2(138, -182)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 607"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 607"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 615" type="Area2D" parent="Taco"]
+position = Vector2(180, -28)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 615"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 615"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1197" type="Area2D" parent="Taco"]
+position = Vector2(154, -69)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1197"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1197"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1198" type="Area2D" parent="Taco"]
+position = Vector2(505, -82)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1198"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1198"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1199" type="Area2D" parent="Taco"]
+position = Vector2(545, -137)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1199"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1199"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1200" type="Area2D" parent="Taco"]
+position = Vector2(477, -178)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1200"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1200"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1201" type="Area2D" parent="Taco"]
+position = Vector2(290, -80)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1201"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1201"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1202" type="Area2D" parent="Taco"]
+position = Vector2(251, -137)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1202"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1202"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1203" type="Area2D" parent="Taco"]
+position = Vector2(183, -121)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1203"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1203"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1204" type="Area2D" parent="Taco"]
+position = Vector2(302, 51)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1204"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1204"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1205" type="Area2D" parent="Taco"]
+position = Vector2(345, 9)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1205"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1205"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1206" type="Area2D" parent="Taco"]
+position = Vector2(319, -32)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1206"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1206"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1207" type="Area2D" parent="Taco"]
+position = Vector2(497, -32)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1207"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1207"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1215" type="Area2D" parent="Taco"]
+position = Vector2(419, -11)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1215"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1215"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1216" type="Area2D" parent="Taco"]
+position = Vector2(458, -89)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1216"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1216"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1217" type="Area2D" parent="Taco"]
+position = Vector2(359, -87)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1217"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1217"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1218" type="Area2D" parent="Taco"]
+position = Vector2(238, 67)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1218"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1218"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1246" type="Area2D" parent="Taco"]
+position = Vector2(199, 10)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1246"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1246"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1247" type="Area2D" parent="Taco"]
+position = Vector2(220, -46)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1247"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1247"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1251" type="Area2D" parent="Taco"]
+position = Vector2(323, -80)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1251"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1251"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1256" type="Area2D" parent="Taco"]
+position = Vector2(489, 12)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1256"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1256"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1320" type="Area2D" parent="Taco"]
+position = Vector2(302, 70)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1320"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1320"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1325" type="Area2D" parent="Taco"]
+position = Vector2(323, 14)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1325"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1325"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1326" type="Area2D" parent="Taco"]
+position = Vector2(135, 31)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1326"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1326"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1327" type="Area2D" parent="Taco"]
+position = Vector2(101, -44)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1327"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1327"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1328" type="Area2D" parent="Taco"]
+position = Vector2(426, -20)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1328"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1328"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1329" type="Area2D" parent="Taco"]
+position = Vector2(369, -55)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1329"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1329"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1375" type="Area2D" parent="Taco"]
+position = Vector2(409, -26)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1375"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1375"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1376" type="Area2D" parent="Taco"]
+position = Vector2(587, -26)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1376"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1376"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1377" type="Area2D" parent="Taco"]
+position = Vector2(548, -83)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1377"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1377"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1378" type="Area2D" parent="Taco"]
+position = Vector2(449, -81)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1378"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1378"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 1386" type="Area2D" parent="Taco"]
+position = Vector2(155, -81)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 1386"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 1386"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2238" type="Area2D" parent="Taco"]
+position = Vector2(593, 78)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2238"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2238"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2265" type="Area2D" parent="Taco"]
+position = Vector2(559, 3)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2265"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2265"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2266" type="Area2D" parent="Taco"]
+position = Vector2(388, 63)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2266"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2266"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2267" type="Area2D" parent="Taco"]
+position = Vector2(463, 40)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2267"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2267"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2268" type="Area2D" parent="Taco"]
+position = Vector2(437, -1)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2268"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2268"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2270" type="Area2D" parent="Taco"]
+position = Vector2(537, 20)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2270"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2270"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2271" type="Area2D" parent="Taco"]
+position = Vector2(451, 57)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2271"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2271"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
+[node name="Taco 2272" type="Area2D" parent="Taco"]
+position = Vector2(425, 16)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_74kv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco/Taco 2272"]
+shape = SubResource("RectangleShape2D_6cjwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco/Taco 2272"]
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_30eho")
+
 [node name="Taco 895" type="Area2D" parent="Taco"]
 position = Vector2(576, -34)
 collision_layer = 4
@@ -32710,10 +34218,6 @@ shape = SubResource("RectangleShape2D_ux7ut")
 [connection signal="taco_collected" from="Taco/Taco 111" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 112" to="Taco/Taco 112" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 112" to="." method="_on_taco_collected"]
-[connection signal="body_entered" from="Taco/Taco 115" to="Taco/Taco 115" method="_on_body_entered"]
-[connection signal="taco_collected" from="Taco/Taco 115" to="." method="_on_taco_collected"]
-[connection signal="body_entered" from="Taco/Taco 116" to="Taco/Taco 116" method="_on_body_entered"]
-[connection signal="taco_collected" from="Taco/Taco 116" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 117" to="Taco/Taco 117" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 117" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 118" to="Taco/Taco 118" method="_on_body_entered"]
@@ -32732,8 +34236,6 @@ shape = SubResource("RectangleShape2D_ux7ut")
 [connection signal="taco_collected" from="Taco/Taco 124" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 125" to="Taco/Taco 125" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 125" to="." method="_on_taco_collected"]
-[connection signal="body_entered" from="Taco/Taco 126" to="Taco/Taco 126" method="_on_body_entered"]
-[connection signal="taco_collected" from="Taco/Taco 126" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 127" to="Taco/Taco 127" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 127" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 128" to="Taco/Taco 128" method="_on_body_entered"]
@@ -34524,6 +36026,40 @@ shape = SubResource("RectangleShape2D_ux7ut")
 [connection signal="taco_collected" from="Taco/Taco 2258" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 2259" to="Taco/Taco 2259" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 2259" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1257" to="Taco/Taco 1257" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1257" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1258" to="Taco/Taco 1258" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1258" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1259" to="Taco/Taco 1259" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1259" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1260" to="Taco/Taco 1260" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1260" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1261" to="Taco/Taco 1261" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1261" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1262" to="Taco/Taco 1262" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1262" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1263" to="Taco/Taco 1263" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1263" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1264" to="Taco/Taco 1264" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1264" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2276" to="Taco/Taco 2276" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2276" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2277" to="Taco/Taco 2277" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2277" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2281" to="Taco/Taco 2281" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2281" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2282" to="Taco/Taco 2282" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2282" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2283" to="Taco/Taco 2283" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2283" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2284" to="Taco/Taco 2284" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2284" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2285" to="Taco/Taco 2285" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2285" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2289" to="Taco/Taco 2289" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2289" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2297" to="Taco/Taco 2297" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2297" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 2260" to="Taco/Taco 2260" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 2260" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 2261" to="Taco/Taco 2261" method="_on_body_entered"]
@@ -37040,6 +38576,190 @@ shape = SubResource("RectangleShape2D_ux7ut")
 [connection signal="taco_collected" from="Taco/Taco 1505" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 1506" to="Taco/Taco 1506" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 1506" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 585" to="Taco/Taco 585" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 585" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 586" to="Taco/Taco 586" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 586" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 590" to="Taco/Taco 590" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 590" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 595" to="Taco/Taco 595" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 595" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 596" to="Taco/Taco 596" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 596" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 597" to="Taco/Taco 597" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 597" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 598" to="Taco/Taco 598" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 598" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 599" to="Taco/Taco 599" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 599" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 600" to="Taco/Taco 600" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 600" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1177" to="Taco/Taco 1177" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1177" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1180" to="Taco/Taco 1180" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1180" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1181" to="Taco/Taco 1181" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1181" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1182" to="Taco/Taco 1182" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1182" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1183" to="Taco/Taco 1183" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1183" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1184" to="Taco/Taco 1184" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1184" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1185" to="Taco/Taco 1185" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1185" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1186" to="Taco/Taco 1186" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1186" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1187" to="Taco/Taco 1187" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1187" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1188" to="Taco/Taco 1188" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1188" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1189" to="Taco/Taco 1189" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1189" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1190" to="Taco/Taco 1190" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1190" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1191" to="Taco/Taco 1191" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1191" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1192" to="Taco/Taco 1192" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1192" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1193" to="Taco/Taco 1193" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1193" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1194" to="Taco/Taco 1194" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1194" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1195" to="Taco/Taco 1195" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1195" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1255" to="Taco/Taco 1255" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1255" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1316" to="Taco/Taco 1316" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1316" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1317" to="Taco/Taco 1317" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1317" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1318" to="Taco/Taco 1318" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1318" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1319" to="Taco/Taco 1319" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1319" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1323" to="Taco/Taco 1323" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1323" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1324" to="Taco/Taco 1324" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1324" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1371" to="Taco/Taco 1371" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1371" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1372" to="Taco/Taco 1372" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1372" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1373" to="Taco/Taco 1373" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1373" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1374" to="Taco/Taco 1374" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1374" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1385" to="Taco/Taco 1385" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1385" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2204" to="Taco/Taco 2204" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2204" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2214" to="Taco/Taco 2214" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2214" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2215" to="Taco/Taco 2215" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2215" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2219" to="Taco/Taco 2219" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2219" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2220" to="Taco/Taco 2220" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2220" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2224" to="Taco/Taco 2224" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2224" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2225" to="Taco/Taco 2225" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2225" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2237" to="Taco/Taco 2237" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2237" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 601" to="Taco/Taco 601" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 601" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 602" to="Taco/Taco 602" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 602" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 603" to="Taco/Taco 603" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 603" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 604" to="Taco/Taco 604" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 604" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 605" to="Taco/Taco 605" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 605" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 606" to="Taco/Taco 606" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 606" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 607" to="Taco/Taco 607" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 607" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 615" to="Taco/Taco 615" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 615" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1197" to="Taco/Taco 1197" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1197" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1198" to="Taco/Taco 1198" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1198" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1199" to="Taco/Taco 1199" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1199" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1200" to="Taco/Taco 1200" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1200" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1201" to="Taco/Taco 1201" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1201" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1202" to="Taco/Taco 1202" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1202" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1203" to="Taco/Taco 1203" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1203" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1204" to="Taco/Taco 1204" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1204" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1205" to="Taco/Taco 1205" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1205" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1206" to="Taco/Taco 1206" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1206" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1207" to="Taco/Taco 1207" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1207" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1215" to="Taco/Taco 1215" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1215" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1216" to="Taco/Taco 1216" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1216" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1217" to="Taco/Taco 1217" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1217" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1218" to="Taco/Taco 1218" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1218" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1246" to="Taco/Taco 1246" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1246" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1247" to="Taco/Taco 1247" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1247" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1251" to="Taco/Taco 1251" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1251" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1256" to="Taco/Taco 1256" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1256" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1320" to="Taco/Taco 1320" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1320" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1325" to="Taco/Taco 1325" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1325" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1326" to="Taco/Taco 1326" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1326" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1327" to="Taco/Taco 1327" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1327" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1328" to="Taco/Taco 1328" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1328" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1329" to="Taco/Taco 1329" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1329" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1375" to="Taco/Taco 1375" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1375" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1376" to="Taco/Taco 1376" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1376" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1377" to="Taco/Taco 1377" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1377" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1378" to="Taco/Taco 1378" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1378" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 1386" to="Taco/Taco 1386" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 1386" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2238" to="Taco/Taco 2238" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2238" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2265" to="Taco/Taco 2265" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2265" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2266" to="Taco/Taco 2266" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2266" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2267" to="Taco/Taco 2267" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2267" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2268" to="Taco/Taco 2268" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2268" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2270" to="Taco/Taco 2270" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2270" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2271" to="Taco/Taco 2271" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2271" to="." method="_on_taco_collected"]
+[connection signal="body_entered" from="Taco/Taco 2272" to="Taco/Taco 2272" method="_on_body_entered"]
+[connection signal="taco_collected" from="Taco/Taco 2272" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 895" to="Taco/Taco 895" method="_on_body_entered"]
 [connection signal="taco_collected" from="Taco/Taco 895" to="." method="_on_taco_collected"]
 [connection signal="body_entered" from="Taco/Taco 896" to="Taco/Taco 896" method="_on_body_entered"]
